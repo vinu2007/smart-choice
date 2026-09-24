@@ -1,0 +1,434 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Checkout" %} | Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="cart-header">
+
+        <span class="product-category">
+            Smart Choice
+        </span>
+
+        <h1 class="page-heading text-center mb-4">
+            {% trans "CHECKOUT" %}
+        </h1>
+
+        <p>
+            {% trans "Review your order before placing it." %}
+        </p>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- BUY NOW CHECKOUT -->
+    <!-- ========================= -->
+
+    {% if buy_now_product %}
+
+        <div class="cart-grid checkout-product-box">
+
+            <div class="cart-card">
+
+                <div class="cart-image">
+
+                    {% if buy_now_product.image %}
+
+                        <img
+                            src="{{ buy_now_product.image.url }}"
+                            alt="{{ buy_now_product.name }}"
+                        >
+
+                    {% else %}
+
+                        {% if buy_now_product.category == "mobile" %}
+                            📱
+                        {% else %}
+                            💻
+                        {% endif %}
+
+                    {% endif %}
+
+                </div>
+
+
+                <div class="cart-info">
+
+                    <span class="product-category">
+                        {{ buy_now_product.category|title }}
+                    </span>
+
+                    <h3>
+                        {{ buy_now_product.brand }}
+                        {{ buy_now_product.name }}
+                    </h3>
+
+                    <p>
+                        {% trans "Quantity" %}: 1
+                    </p>
+
+                    <strong class="cart-price">
+                        ₹{{ buy_now_product.price }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-total checkout-total-box">
+
+            <span>
+                {% trans "Total" %}
+            </span>
+
+            <strong>
+                ₹{{ buy_now_total }}
+            </strong>
+
+        </div>
+
+
+        <form method="POST" action="{% url 'place_order' %}" class="checkout-form">
+
+            {% csrf_token %}
+
+            <input
+                type="hidden"
+                name="product_id"
+                value="{{ buy_now_product.id }}"
+            >
+
+            <input
+                type="hidden"
+                name="quantity"
+                value="1"
+            >
+
+
+            <div style="margin-top: 30px;">
+
+                <h2 class="page-heading">
+                    {% trans "Delivery Details" %}
+                </h2>
+
+
+                <div class="delivery-fields">
+
+                    <label>
+                        {% trans "Full Name" %}
+                    </label>
+
+                    <input
+                        type="text"
+                        name="full_name"
+                        placeholder="{% trans 'Enter your full name' %}"
+                        required
+                    >
+
+
+                    <label>
+                        {% trans "Phone Number" %}
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="{% trans 'Enter your phone number' %}"
+                        required
+                    >
+
+
+                    <label>
+                        {% trans "Address" %}
+                    </label>
+
+                    <textarea
+                        name="address"
+                        placeholder="{% trans 'Enter your delivery address' %}"
+                        required
+                    ></textarea>
+
+
+                    <label>
+                        {% trans "City" %}
+                    </label>
+
+                    <input
+                        type="text"
+                        name="city"
+                        placeholder="{% trans 'Enter your city' %}"
+                        required
+                    >
+
+
+                    <label>
+                        {% trans "Pincode" %}
+                    </label>
+
+                    <input
+                        type="text"
+                        name="pincode"
+                        placeholder="{% trans 'Enter your pincode' %}"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-field">
+
+                <label>
+                    {% trans "Payment Method" %}
+                </label>
+
+                <select
+                    name="payment_method"
+                    required
+                >
+
+                    <option value="Cash on Delivery">
+                        💵 {% trans "Cash on Delivery" %}
+                    </option>
+
+                    <option value="Online Payment">
+                        💳 {% trans "Online Payment" %}
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn-pink"
+            >
+                ✅ {% trans "Place Order" %}
+            </button>
+
+        </form>
+
+
+    <!-- ========================= -->
+    <!-- CART CHECKOUT -->
+    <!-- ========================= -->
+
+    {% elif cart_items %}
+
+        <div class="cart-grid checkout-product-box">
+
+            {% for item in cart_items %}
+
+            <div class="cart-card">
+
+                <div class="cart-image">
+
+                    {% if item.product.image %}
+
+                        <img
+                            src="{{ item.product.image.url }}"
+                            alt="{{ item.product.name }}"
+                        >
+
+                    {% else %}
+
+                        {% if item.product.category == "mobile" %}
+                            📱
+                        {% else %}
+                            💻
+                        {% endif %}
+
+                    {% endif %}
+
+                </div>
+
+
+                <div class="cart-info">
+
+                    <span class="product-category">
+                        {{ item.product.category|title }}
+                    </span>
+
+                    <h3>
+                        {{ item.product.brand }}
+                        {{ item.product.name }}
+                    </h3>
+
+                    <p>
+                        {% trans "Quantity" %}: {{ item.quantity }}
+                    </p>
+
+                    <strong class="cart-price">
+                        ₹{{ item.product.price }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <div class="cart-total checkout-total-box">
+
+            <span>
+                {% trans "Total" %}
+            </span>
+
+            <strong>
+                ₹{{ total }}
+            </strong>
+
+        </div>
+
+
+        <form method="POST" action="{% url 'place_order' %}" class="checkout-form">
+
+            {% csrf_token %}
+
+
+            <div style="margin-top: 30px;">
+
+                <h2>
+                    📍 {% trans "Delivery Details" %}
+                </h2>
+
+
+                <div class="delivery-fields">
+
+                    <label>
+                        {% trans "Full Name" %}
+                    </label>
+
+                    <input
+                        type="text"
+                        name="full_name"
+                        placeholder="{% trans 'Enter your full name' %}"
+                        required
+                    >
+
+
+                    <label>
+                        {% trans "Phone Number" %}
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="{% trans 'Enter your phone number' %}"
+                        required
+                    >
+
+
+                    <label>
+                        {% trans "Address" %}
+                    </label>
+
+                    <textarea
+                        name="address"
+                        placeholder="{% trans 'Enter your delivery address' %}"
+                        required
+                    ></textarea>
+
+
+                    <label>
+                        {% trans "City" %}
+                    </label>
+
+                    <input
+                        type="text"
+                        name="city"
+                        placeholder="{% trans 'Enter your city' %}"
+                        required
+                    >
+
+
+                    <label>
+                        {% trans "Pincode" %}
+                    </label>
+
+                    <input
+                        type="text"
+                        name="pincode"
+                        placeholder="{% trans 'Enter your pincode' %}"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="payment-field">
+
+                <label>
+                    💳 {% trans "Payment Method" %}
+                </label>
+
+                <select
+                    name="payment_method"
+                    required
+                >
+
+                    <option value="Cash on Delivery">
+                        💵 {% trans "Cash on Delivery" %}
+                    </option>
+
+                    <option value="Online Payment">
+                        💳 {% trans "Online Payment" %}
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn-pink"
+            >
+                ✅ {% trans "Place Order" %}
+            </button>
+
+        </form>
+
+
+    {% else %}
+
+        <div class="empty-cart">
+
+            <div class="empty-cart-icon">
+                🛒
+            </div>
+
+            <h2>
+                {% trans "Your Cart is Empty" %}
+            </h2>
+
+            <a
+                href="/products/"
+                class="btn-pink"
+            >
+                {% trans "Explore Products" %} →
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

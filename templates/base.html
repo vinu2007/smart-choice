@@ -1,0 +1,79 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Smart Choice{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/storefront.css' %}?v=3">
+    <link rel="stylesheet" href="{% static 'css/pink-refresh.css' %}?v=9">
+</head>
+<body>
+    <div class="sc-announcement"><div class="sc-wrap sc-announcement-inner">
+        <span>{% trans "Find your next device with confidence" %}</span>
+        <span class="sc-announcement-right">{% trans "Compare prices • Shop smarter" %}</span>
+    </div></div>
+    <header class="sc-site-header{% if user.is_authenticated %} sc-has-session{% endif %}"><div class="sc-wrap sc-header-inner">
+        <a class="sc-brand" href="{% url 'home' %}" aria-label="Smart Choice home">
+            <span class="sc-brand-mark" aria-hidden="true">✓</span>
+            <span>smart<span>choice</span><small>FIND YOUR FIT</small></span>
+        </a>
+        <nav class="sc-header-nav" aria-label="{% trans 'Main menu' %}">
+            <button id="menuToggle" class="sc-menu-toggle" type="button" aria-controls="siteNav" aria-expanded="false"><span aria-hidden="true">☰</span> {% trans "Menu" %}</button>
+            <div id="siteNav" class="sc-nav-links">
+                <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}is-active{% endif %}">{% trans "Home" %}</a>
+                <a href="{% url 'product_list' %}?category=mobile">{% trans "Mobiles" %}</a>
+                <a href="{% url 'product_list' %}?category=laptop">{% trans "Laptops" %}</a>
+                <a href="{% url 'compare_menu' %}">{% trans "Compare" %}</a>
+                <a href="{% url 'store_compare_select' %}">{% trans "Store Prices" %}</a>
+                <a href="{% url 'recommend_product' %}">{% trans "AI Guide" %}</a>
+            </div>
+        </nav>
+        <div class="sc-header-actions">
+            <a class="sc-header-action sc-account-action" href="{% url 'account' %}" aria-label="{% trans 'Account' %}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c.2-4 2.8-6 7-6s6.8 2 7 6"></path></svg><span>{% if user.is_authenticated %}{{ user.username }}{% else %}{% trans "Account" %}{% endif %}</span></a>
+            <a class="sc-header-action sc-cart-action" href="{% url 'cart' %}" aria-label="{% trans 'Cart' %}: {{ cart_count }} {% trans 'items' %}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h2l2.3 10.2a2 2 0 0 0 2 1.6h9.9a2 2 0 0 0 2-1.6L22 7H5"></path><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle></svg><span>{% trans "Cart" %}</span><b class="sc-cart-count">{{ cart_count }}</b></a>
+            {% if user.is_authenticated %}
+                <a class="sc-logout-button" href="{% url 'logout' %}">{% trans "Logout" %}</a>
+            {% else %}
+                <a class="sc-logout-button sc-login-trigger" id="loginModalTrigger" href="{% url 'login' %}?next={{ request.get_full_path|urlencode }}" aria-haspopup="dialog" aria-controls="loginModal">{% trans "Login" %}</a>
+            {% endif %}
+        </div>
+    </div></header>
+    <div class="sc-cart-toast" id="cartToast" role="status" aria-live="polite" hidden>
+        <span class="sc-cart-toast-icon" aria-hidden="true">✓</span>
+        <span><strong>{% trans "Added to cart" %}</strong><small id="cartToastMessage">{% trans "Product added successfully." %}</small></span>
+    </div>
+    <main class="main-content">{% block content %}{% endblock %}</main>
+    {% if not user.is_authenticated %}
+    <div class="sc-login-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle" hidden>
+        <div class="sc-login-backdrop" data-login-close></div>
+        <section class="sc-login-dialog" tabindex="-1">
+            <button class="sc-login-close" type="button" data-login-close aria-label="{% trans 'Close login' %}">×</button>
+            <div class="sc-login-icon" aria-hidden="true">🔐</div>
+            <h2 id="loginModalTitle">{% trans "Sign in to" %} <span>Smart Choice</span></h2>
+            <p>{% trans "Enter your username and password to continue." %}</p>
+            <div class="sc-login-error" id="loginModalError" role="alert" hidden></div>
+            <form id="loginModalForm" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                <label for="modalUsername">{% trans "Username" %}</label>
+                <input id="modalUsername" type="text" name="username" autocomplete="username" required>
+                <label for="modalPassword">{% trans "Password" %}</label>
+                <input id="modalPassword" type="password" name="password" autocomplete="current-password" required>
+                <button type="submit">{% trans "Login" %}</button>
+            </form>
+            <p class="sc-login-signup">{% trans "Don't have an account?" %} <a href="{% url 'signup' %}">{% trans "Create Account" %}</a></p>
+        </section>
+    </div>
+    {% endif %}
+    <footer class="sc-footer"><div class="sc-wrap sc-footer-inner">
+        <div><strong>smart<span>choice</span></strong><p>{% trans "A simpler way to discover, compare, and choose your next device." %}</p></div>
+        <div class="sc-footer-links"><a href="{% url 'product_list' %}">{% trans "Shop" %}</a><a href="{% url 'compare_menu' %}">{% trans "Compare" %}</a><a href="{% url 'recommend_product' %}">{% trans "AI Guide" %}</a><a href="{% url 'account' %}">{% trans "Account" %}</a></div>
+    </div></footer>
+    <script src="{% static 'js/main.js' %}?v=7"></script>
+</body>
+</html>
+

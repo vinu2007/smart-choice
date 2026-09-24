@@ -1,0 +1,344 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="compare-page">
+
+    <div class="compare-header">
+
+        <span class="compare-badge">
+            ⚖️ {% trans "SMART COMPARISON" %}
+        </span>
+
+        <h1>{% trans "Compare Products" %}</h1>
+
+        <p>
+            {% trans "Compare specifications and choose the right product for you." %}
+        </p>
+
+    </div>
+
+
+    {% if products %}
+
+    <div class="compare-table-wrapper">
+
+        <table class="compare-table">
+
+            <thead>
+
+                <tr>
+
+                    <th class="spec-title">
+                        {% trans "Specifications" %}
+                    </th>
+
+
+                    {% for product in products %}
+
+                    <th>
+
+                        {% if product.id == best_product_id %}
+
+                            <div class="best-choice-badge">
+                                🏆 {% trans "BEST CHOICE" %}
+                            </div>
+
+                        {% endif %}
+
+
+                        {% if product.image %}
+
+                            <img
+                                src="{{ product.image.url }}"
+                                class="compare-image"
+                                alt="{{ product.name }}"
+                            >
+
+                        {% endif %}
+
+
+                        <h3>
+                            {{ product.brand }}
+                            {{ product.name }}
+                        </h3>
+
+
+                        <span class="compare-category">
+                            {{ product.category|title }}
+                        </span>
+
+                    </th>
+
+                    {% endfor %}
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>💰 {% trans "Price" %}</td>
+
+                    {% for product in products %}
+
+                    <td
+                        class="price-value
+                        {% if product.price|floatformat:"0" == best_price|floatformat:"0" %}
+                            best-spec
+                        {% endif %}"
+                    >
+
+                        ₹{{ product.price }}
+
+                        {% if product.price|floatformat:"0" == best_price|floatformat:"0" %}
+                            💰
+                        {% endif %}
+
+                    </td>
+
+                    {% endfor %}
+
+                </tr>
+
+
+                <tr>
+
+                    <td>⭐ {% trans "Rating" %}</td>
+
+                    {% for product in products %}
+
+                    <td
+                        {% if product.rating|floatformat:"1" == best_product_rating|floatformat:"1" %}
+                            class="best-spec"
+                        {% endif %}
+                    >
+
+                        ⭐ {{ product.rating }}
+
+                        {% if product.rating|floatformat:"1" == best_product_rating|floatformat:"1" %}
+                            🏆
+                        {% endif %}
+
+                    </td>
+
+                    {% endfor %}
+
+                </tr>
+
+
+                <tr>
+
+                    <td>⚡ {% trans "Processor" %}</td>
+
+                    {% for product in products %}
+
+                    <td>
+                        {{ product.processor|default:"Not available" }}
+                    </td>
+
+                    {% endfor %}
+
+                </tr>
+
+
+                <tr>
+
+                    <td>🧠 {% trans "RAM" %}</td>
+
+                    {% for product in products %}
+
+                    <td
+                        {% if product.ram %}
+                            {% with ram_match=product.ram|cut:"GB" %}
+                                {% if ram_match|add:"0" == best_ram %}
+                                    class="best-spec"
+                                {% endif %}
+                            {% endwith %}
+                        {% endif %}
+                    >
+
+                        {{ product.ram|default:"Not available" }}
+
+                        {% if product.ram %}
+                            {% with ram_match=product.ram|cut:"GB" %}
+                                {% if ram_match|add:"0" == best_ram %}
+                                    🏆
+                                {% endif %}
+                            {% endwith %}
+                        {% endif %}
+
+                    </td>
+
+                    {% endfor %}
+
+                </tr>
+
+
+                <tr>
+
+                    <td>💾 {% trans "Storage" %}</td>
+
+                    {% for product in products %}
+
+                    <td
+                        {% if product.storage %}
+                            {% with storage_match=product.storage|cut:"GB" %}
+                                {% if storage_match|add:"0" == best_storage %}
+                                    class="best-spec"
+                                {% endif %}
+                            {% endwith %}
+                        {% endif %}
+                    >
+
+                        {{ product.storage|default:"Not available" }}
+
+                        {% if product.storage %}
+                            {% with storage_match=product.storage|cut:"GB" %}
+                                {% if storage_match|add:"0" == best_storage %}
+                                    🏆
+                                {% endif %}
+                            {% endwith %}
+                        {% endif %}
+
+                    </td>
+
+                    {% endfor %}
+
+                </tr>
+
+
+                <tr>
+
+                    <td>📱 {% trans "Category" %}</td>
+
+                    {% for product in products %}
+
+                    <td>
+                        {{ product.category|title }}
+                    </td>
+
+                    {% endfor %}
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    {% if best_product_id %}
+
+    {% for product in products %}
+
+        {% if product.id == best_product_id %}
+
+        <div class="best-choice-explanation">
+
+            <div class="best-choice-title">
+                🏆 {% trans "Best Choice" %}
+            </div>
+
+            <h2>
+                {{ product.brand }} {{ product.name }}
+            </h2>
+
+            <p>
+                {% trans "This product is recommended as the best overall choice based on its price, rating and available specifications." %}
+            </p>
+
+            <div class="best-choice-reasons">
+
+                <span>💰 {% trans "Price" %}: ₹{{ product.price }}</span>
+
+                <span>⭐ {% trans "Rating" %}: {{ product.rating }}</span>
+
+                {% if product.ram %}
+                    <span>🧠 {% trans "RAM" %}: {{ product.ram }}</span>
+                {% endif %}
+
+                {% if product.storage %}
+                    <span>💾 {% trans "Storage" %}: {{ product.storage }}</span>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    {% endfor %}
+
+    {% endif %}
+
+
+    <div class="compare-actions">
+
+        {% for product in products %}
+
+        <a
+            href="/product/{{ product.id }}/"
+            class="compare-view-btn">
+
+            {% trans "View" %} {{ product.brand }} {{ product.name }}
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="compare-back-action">
+
+        <a
+            href="{% url 'compare' %}"
+            class="compare-back-btn">
+
+            ← {% trans "Choose Different Products" %}
+
+        </a>
+
+    </div>
+
+
+    {% else %}
+
+    <section class="sc-compare-picker">
+        {% if category_mismatch %}<p class="sc-compare-server-error" role="alert">{% trans "Mobiles can be compared only with mobiles, and laptops only with laptops. Please choose products from one category." %}</p>{% endif %}
+        <div class="sc-compare-picker-heading"><div><span class="product-category">{% trans "PRODUCT PICKER" %}</span><h2>{% trans "Select products to compare" %}</h2></div><p>{% trans "Choose two or three products from the same category." %}</p></div>
+        <form method="get" action="{% url 'compare' %}" class="sc-compare-picker-form">
+            <div class="sc-selection-status" aria-live="polite">
+                <span class="sc-selection-icon">✓</span>
+                <span><strong data-selection-count>{% trans "0 products selected" %}</strong><small data-selection-hint>{% trans "Select a mobile or laptop to begin." %}</small></span>
+            </div>
+            <div class="sc-compare-picker-grid">
+                {% for product in available_products %}
+                <label class="sc-compare-pick-card" data-category="{{ product.category|lower }}">
+                    <input type="checkbox" name="products" value="{{ product.id }}" data-category="{{ product.category|lower }}">
+                    <span class="sc-pick-check">✓</span>
+                    {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.brand }} {{ product.name }}">{% endif %}
+                    <span class="sc-pick-category">{{ product.category|title }}</span>
+                    <strong>{{ product.brand }} {{ product.name }}</strong>
+                    <small>₹{{ product.price }} · ★ {{ product.rating }}</small>
+                </label>
+                {% endfor %}
+            </div>
+            <p class="sc-compare-picker-error" role="alert" hidden>{% trans "Please select two or three products." %}</p>
+            <button type="submit" class="btn-pink sc-floating-compare" disabled><span>{% trans "Compare Selected Products" %}</span><b data-floating-count>0</b></button>
+        </form>
+    </section>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
+
+

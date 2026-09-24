@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}Smart Choice | {% trans "Find Your Next Device" %}{% endblock %}
+{% block content %}
+<div class="sc-home">
+    <section class="sc-hero-slider" id="homeHeroSlider" aria-roledescription="carousel" aria-label="{% trans 'Featured technology' %}">
+        <article class="sc-hero-slide sc-hero-slide-mobile is-active" data-hero-slide aria-hidden="false">
+            <div class="sc-wrap sc-hero-slide-inner">
+                <div class="sc-hero-slide-copy">
+                    <span class="sc-eyebrow">{% trans "THE LATEST IS HERE" %}</span>
+                    <h1>{% trans "Latest mobiles." %}<br><em>{% trans "Smarter choices." %}</em></h1>
+                    <p>{% trans "Discover new smartphones from leading brands and find the features that fit your life." %}</p>
+                    <div class="sc-hero-actions">
+                        <a class="sc-button sc-button-light" href="{% url 'product_list' %}?category=mobile">{% trans "Explore mobiles" %} <span aria-hidden="true">↗</span></a>
+                        <a class="sc-hero-secondary" href="{% url 'compare_menu' %}">{% trans "Compare models" %} →</a>
+                    </div>
+                </div>
+                <div class="sc-hero-slide-image"><img src="{% static 'images/hero-mobiles-transparent.png' %}" alt="{% trans 'Latest smartphones from leading brands' %}"></div>
+            </div>
+        </article>
+        <article class="sc-hero-slide sc-hero-slide-laptop" data-hero-slide aria-hidden="true">
+            <div class="sc-wrap sc-hero-slide-inner">
+                <div class="sc-hero-slide-copy">
+                    <span class="sc-eyebrow">{% trans "TOP BRANDS. ONE PLACE." %}</span>
+                    <h1>{% trans "Branded laptops." %}<br><em>{% trans "Built for every goal." %}</em></h1>
+                    <p>{% trans "Explore powerful laptops for work, study, gaming, and creativity from brands you trust." %}</p>
+                    <div class="sc-hero-actions">
+                        <a class="sc-button sc-button-light" href="{% url 'product_list' %}?category=laptop">{% trans "Explore laptops" %} <span aria-hidden="true">↗</span></a>
+                        <a class="sc-hero-secondary" href="{% url 'recommend_product' %}">{% trans "Ask our AI guide" %} →</a>
+                    </div>
+                </div>
+                <div class="sc-hero-slide-image"><img src="{% static 'images/hero-laptops-transparent.png' %}" alt="{% trans 'Laptops from leading brands' %}"></div>
+            </div>
+        </article>
+        <article class="sc-hero-slide sc-hero-slide-versus" data-hero-slide aria-hidden="true">
+            <div class="sc-wrap sc-hero-slide-inner">
+                <div class="sc-hero-slide-copy">
+                    <span class="sc-eyebrow">{% trans "THE PRICE BATTLE" %}</span>
+                    <h1>{% trans "Amazon versus Flipkart." %}<br><em>{% trans "Who wins today?" %}</em></h1>
+                    <p>{% trans "Put both stores head to head and find the better price before you buy." %}</p>
+                    <div class="sc-hero-actions">
+                        <a class="sc-button sc-button-light" href="{% url 'store_compare_select' %}">{% trans "Compare store prices" %} <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+                <div class="sc-hero-versus-art" aria-label="Amazon versus Flipkart">
+                    <div class="sc-versus-logo sc-versus-amazon"><img src="{% static 'images/amazon-logo.svg' %}" alt="Amazon"></div>
+                    <span class="sc-versus-bolt" aria-hidden="true">VS</span>
+                    <div class="sc-versus-logo sc-versus-flipkart"><img src="{% static 'images/flipkart-logo.svg' %}" alt="Flipkart"></div>
+                </div>
+            </div>
+        </article>
+        <div class="sc-hero-dots" role="group" aria-label="{% trans 'Choose hero slide' %}">
+            <button class="is-active" type="button" data-hero-dot="0" aria-label="{% trans 'Show latest mobiles' %}" aria-current="true"></button>
+            <button type="button" data-hero-dot="1" aria-label="{% trans 'Show branded laptops' %}" aria-current="false"></button>
+            <button type="button" data-hero-dot="2" aria-label="{% trans 'Show Amazon versus Flipkart' %}" aria-current="false"></button>
+        </div>
+    </section>
+
+    <div class="sc-wrap sc-trust-strip" aria-label="{% trans 'Ways to shop' %}">
+        <div><span class="sc-trust-icon">⌕</span><p><strong>{% trans "Search easily" %}</strong><small>{% trans "Find the right device fast" %}</small></p></div>
+        <div><span class="sc-trust-icon">⇄</span><p><strong>{% trans "Compare clearly" %}</strong><small>{% trans "Specs and store prices" %}</small></p></div>
+        <div><span class="sc-trust-icon">✦</span><p><strong>{% trans "Get guidance" %}</strong><small>{% trans "Recommendations for you" %}</small></p></div>
+    </div>
+
+    <section class="sc-wrap sc-home-section sc-category-section">
+        <div class="sc-section-heading"><div><span class="sc-section-kicker">{% trans "SHOP BY CATEGORY" %}</span><h2>{% trans "What are you looking for?" %}</h2></div><a href="{% url 'product_list' %}">{% trans "Explore all products" %} →</a></div>
+        <div class="sc-category-grid">
+            <a class="sc-category-tile sc-category-mobile" href="{% url 'product_list' %}?category=mobile">
+                <div><span class="sc-tile-kicker">{% trans "EVERYDAY ESSENTIALS" %}</span><h3>{% trans "Smartphones" %}</h3><p>{% trans "The right phone for every moment." %}</p><span class="sc-tile-link">{% trans "Shop mobiles" %} ↗</span></div>
+                <img src="{% static 'images/smartphone.jpeg' %}" alt="{% trans 'Smartphones' %}" loading="lazy">
+            </a>
+            <a class="sc-category-tile sc-category-laptop" href="{% url 'product_list' %}?category=laptop">
+                <div><span class="sc-tile-kicker">{% trans "WORK. PLAY. CREATE." %}</span><h3>{% trans "Laptops" %}</h3><p>{% trans "Power for everything you do." %}</p><span class="sc-tile-link">{% trans "Shop laptops" %} ↗</span></div>
+                <img src="{% static 'images/laptop.jpeg' %}" alt="{% trans 'Laptops' %}" loading="lazy">
+            </a>
+        </div>
+    </section>
+
+    <section class="sc-wrap sc-home-section sc-products-section">
+        <div class="sc-section-heading"><div><span class="sc-section-kicker">{% trans "TOP RATED" %}</span><h2>{% trans "Popular right now" %}</h2></div><a href="{% url 'product_list' %}">{% trans "View all products" %} →</a></div>
+        <div class="sc-product-grid">
+            {% for product in products %}
+            <article class="sc-product-card">
+                <a class="sc-product-photo" href="{% url 'product_detail' product.id %}" aria-label="{{ product.brand }} {{ product.name }}">
+                    {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.brand }} {{ product.name }}" loading="lazy">
+                    {% elif product.category == 'mobile' %}<img src="{% static 'images/smartphone.jpeg' %}" alt="{% trans 'Smartphone' %}" loading="lazy">
+                    {% else %}<img src="{% static 'images/laptop.jpeg' %}" alt="{% trans 'Laptop' %}" loading="lazy">{% endif %}
+                </a>
+                <div class="sc-product-content">
+                    <span class="sc-product-category">{{ product.category|title }}</span>
+                    <h3><a href="{% url 'product_detail' product.id %}">{{ product.brand }} {{ product.name }}</a></h3>
+                    <p class="sc-product-spec">{{ product.processor|default:product.storage }}</p>
+                    <div class="sc-product-rating"><span aria-hidden="true">★</span> {{ product.rating }} <small>{% trans "rating" %}</small></div>
+                    <div class="sc-product-bottom"><strong>₹{{ product.price }}</strong><a href="{% url 'add_to_cart' product.id %}" aria-label="{% trans 'Add to cart' %}: {{ product.name }}" title="{% trans 'Add to cart' %}">+</a></div>
+                </div>
+            </article>
+            {% empty %}<p>{% trans "No products available yet." %}</p>{% endfor %}
+        </div>
+    </section>
+
+    <section class="sc-wrap sc-guidance-banner">
+        <div><span class="sc-section-kicker">{% trans "NEED A LITTLE HELP?" %}</span><h2>{% trans "Your perfect pick is a question away." %}</h2><p>{% trans "Tell Smart Choice what matters to you and see devices that fit your budget and needs." %}</p><a class="sc-button sc-button-dark" href="{% url 'recommend_product' %}">{% trans "Get AI recommendations" %} ↗</a></div>
+        <div class="sc-guidance-art" aria-hidden="true"><span>✦</span><span>?</span><span>✧</span></div>
+    </section>
+</div>
+{% endblock %}

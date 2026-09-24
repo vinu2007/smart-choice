@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}
+{% trans "Store vs Store" %} - Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="compare-header"><span class="product-category">{% trans "THREE PRICES. ONE DECISION." %}</span><h1>{% trans "Compare buying options" %}</h1><p>{% trans "Select a product to compare Smart Choice with leading marketplaces." %}</p><div class="sc-marketplace-logos"><span class="sc-smartchoice-badge">✓ smartchoice</span><img src="{% static 'images/amazon-logo.svg' %}" alt="Amazon"><img src="{% static 'images/flipkart-logo.svg' %}" alt="Flipkart"></div></div>
+
+    <div class="store-search-wrapper">
+
+        <form method="GET">
+
+            <div class="store-search-box">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="text"
+                    name="search"
+                    value="{{ search }}"
+                    placeholder="{% trans 'Search product or brand...' %}"
+                >
+
+                <button type="submit">
+                    {% trans "Search" %}
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="row g-4">
+
+        {% for product in products %}
+
+        <div class="col-md-4">
+
+            <div class="store-product-card">
+
+                {% if product.image %}
+                    <img
+                        src="{{ product.image.url }}"
+                        alt="{{ product.name }}"
+                        style="max-width: 180px; height: 180px; object-fit: contain;"
+                    >
+                {% endif %}
+
+                <h3>
+                    {{ product.brand }} {{ product.name }}
+                </h3>
+
+                <p>
+                    ₹{{ product.price }}
+                </p>
+
+                <a
+                    href="{% url 'store_compare' product.id %}"
+                    class="btn-pink"
+                >
+                    🛒 {% trans "Compare Stores" %}
+                </a>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="col-12">
+            <p class="text-center">
+                {% trans "No products available." %}
+            </p>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "My Orders" %} | Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="account-page sc-orders-page">
+
+    <div class="account-header">
+
+        <h1>{% trans "My Orders" %}</h1>
+
+        <p>
+            {% trans "View your Smart Choice order history" %}
+        </p>
+
+    </div>
+
+
+    {% if orders %}
+
+        {% for order in orders %}
+
+        <div class="order-card">
+
+            <div class="order-top">
+
+                <div>
+                    <h3>
+                        {% trans "Order" %} #{{ order.id }}
+                    </h3>
+
+                    <p>
+                        {{ order.created_at|date:"d M Y, h:i A" }}
+                    </p>
+                </div>
+
+
+                <span class="order-status status-{{ order.status }}">
+                    {{ order.get_status_display }}
+                </span>
+
+            </div>
+
+
+            <div class="order-middle">
+
+                <div>
+                    <span>{% trans "Total Amount" %}</span>
+
+                    <strong>
+                        ₹{{ order.total_amount }}
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>{% trans "Items" %}</span>
+
+                    <strong>
+                        {{ order.items.count }}
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="order-bottom">
+
+                <a
+                    href="{% url 'order_detail' order.id %}"
+                    class="order-view-btn"
+                >
+                    {% trans "View Details" %} →
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty-cart">
+
+            <div class="empty-cart-icon">
+                📦
+            </div>
+
+            <h2>
+                {% trans "No Orders Yet" %}
+            </h2>
+
+            <p>
+                {% trans "Your placed orders will appear here." %}
+            </p>
+
+            <a
+                href="/products/"
+                class="btn-pink"
+            >
+                {% trans "Explore Products" %} →
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

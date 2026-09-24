@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Edit Profile" %} - Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="account-page">
+
+    <div class="account-section">
+
+        <h1>{% trans "Edit Profile" %}</h1>
+
+        <p>{% trans "Update your account details" %}</p>
+
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    {% trans "Username" %}
+                </label>
+
+                <input
+                    type="text"
+                    name="username"
+                    class="form-control"
+                    value="{{ username }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    {% trans "Email" %}
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    value="{{ email }}"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="account-login-btn"
+            >
+                {% trans "Save Changes" %}
+            </button>
+
+            <a
+                href="{% url 'account' %}"
+                class="btn btn-secondary ms-2"
+            >
+                {% trans "Cancel" %}
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Order Successful" %} | Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="empty-cart order-success-box">
+
+        <div class="empty-cart-icon">
+            ✅
+        </div>
+
+        <h1 class="page-heading">
+            {% trans "Order Placed Successfully!" %}
+        </h1>
+
+        <p>
+            {% trans "Thank you for shopping with Smart Choice." %}
+        </p>
+
+        <p>
+            {% trans "Your order has been received successfully." %}
+        </p>
+
+        <a
+            href="/products/"
+            class="btn-pink"
+        >
+            {% trans "Continue Shopping" %}
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

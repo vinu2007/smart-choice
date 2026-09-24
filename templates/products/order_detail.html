@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Order Details" %} | Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="cart-header">
+
+        <span class="product-category">
+            Smart Choice
+        </span>
+
+        <h1>
+            📦 {% trans "Order" %} #{{ order.id }}
+        </h1>
+
+        <p>
+            {% trans "Order Details" %}
+        </p>
+
+    </div>
+
+
+    <!-- ORDER INFORMATION -->
+
+    <div class="cart-card" style="margin-bottom: 25px;">
+
+        <div class="cart-info">
+
+            <h3>
+                {% trans "Order Information" %}
+            </h3>
+
+            <p>
+                📅
+                <strong>{% trans "Order Date" %}:</strong>
+                {{ order.created_at }}
+            </p>
+
+            <p>
+                📌
+                <strong>{% trans "Status" %}:</strong>
+                {{ order.get_status_display }}
+            </p>
+
+            <p>
+                💰
+                <strong>{% trans "Total Amount" %}:</strong>
+                ₹{{ order.total_amount }}
+            </p>
+
+            <p>
+                👤
+                <strong>{% trans "Name" %}:</strong>
+                {{ order.full_name }}
+            </p>
+
+            <p>
+                📱
+                <strong>{% trans "Phone" %}:</strong>
+                {{ order.phone }}
+            </p>
+
+            <p>
+                🏠
+                <strong>{% trans "Address" %}:</strong>
+                {{ order.address }}
+            </p>
+
+            <p>
+                🌆
+                <strong>{% trans "City" %}:</strong>
+                {{ order.city }}
+            </p>
+
+            <p>
+                📮
+                <strong>{% trans "Pincode" %}:</strong>
+                {{ order.pincode }}
+            </p>
+
+            <p>
+                💳
+                <strong>{% trans "Payment Method" %}:</strong>
+                {{ order.payment_method }}
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ORDER ITEMS -->
+
+    <h2 style="margin-bottom: 20px;">
+        🛍️ {% trans "Ordered Products" %}
+    </h2>
+
+
+    {% for item in order.items.all %}
+
+    <div class="cart-card" style="margin-bottom: 20px;">
+
+        <div class="cart-image">
+
+            {% if item.product.image %}
+
+                <img
+                    src="{{ item.product.image.url }}"
+                    alt="{{ item.product.name }}"
+                >
+
+            {% else %}
+
+                {% if item.product.category == "mobile" %}
+                    📱
+                {% else %}
+                    💻
+                {% endif %}
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="cart-info">
+
+            <span class="product-category">
+                {{ item.product.category|title }}
+            </span>
+
+            <h3>
+                {{ item.product.brand }}
+                {{ item.product.name }}
+            </h3>
+
+            <p>
+                🔢 {% trans "Quantity" %}: {{ item.quantity }}
+            </p>
+
+            <p>
+                💵 {% trans "Price" %}: ₹{{ item.price }}
+            </p>
+
+            <strong class="cart-price">
+                ₹{% widthratio item.price 1 item.quantity %}
+            </strong>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+
+    <!-- TOTAL -->
+
+    <div class="cart-total">
+
+        <span>
+            {% trans "Total" %}
+        </span>
+
+        <strong>
+            ₹{{ order.total_amount }}
+        </strong>
+
+    </div>
+
+    {% if order.status == "pending" %}
+
+    <form
+        method="POST"
+        action="{% url 'cancel_order' order.id %}"
+        style="text-align: center; margin-top: 20px;"
+    >
+
+        {% csrf_token %}
+
+        <button
+            type="submit"
+            class="btn-pink"
+            data-confirm-message="{% trans 'Are you sure you want to cancel this order?' %}"
+            onclick="return confirm(this.dataset.confirmMessage);"
+        >
+            ❌ {% trans "Cancel Order" %}
+        </button>
+
+    </form>
+
+    {% endif %}
+
+
+    <!-- BACK BUTTON -->
+
+    <div style="text-align: center; margin-top: 25px;">
+
+        <a
+            href="{% url 'my_orders' %}"
+            class="btn-pink"
+        >
+            ← {% trans "Back to My Orders" %}
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

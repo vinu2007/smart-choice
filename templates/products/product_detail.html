@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{{ product.brand }} {{ product.name }} | Smart Choice{% endblock %}
+{% block content %}
+<div class="container sc-inner-page sc-detail-page">
+    <a class="sc-back-link" href="{% url 'product_list' %}">← {% trans "Back to products" %}</a>
+    <div class="sc-detail-layout">
+        <div class="sc-detail-media">
+            {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.brand }} {{ product.name }}">
+            {% else %}<div class="detail-placeholder">{% if product.category == 'mobile' %}📱{% else %}💻{% endif %}</div>{% endif %}
+        </div>
+        <div class="sc-detail-info">
+            <span class="product-category">{{ product.category|title }}</span>
+            <h1>{{ product.brand }} {{ product.name }}</h1>
+            <div class="detail-rating">★ {{ product.rating }} / 5</div>
+            <div class="sc-detail-price">₹{{ product.price }}</div>
+            {% if product.description %}<p class="sc-detail-description">{{ product.description }}</p>{% endif %}
+            <div class="sc-detail-actions">
+                <a class="btn-pink" href="{% url 'add_to_cart' product.id %}">{% trans "Add to Cart" %}</a>
+                <a class="btn-pink sc-button-outline" href="{% url 'buy_now' product.id %}">{% trans "Buy Now" %}</a>
+            </div>
+            <div class="sc-detail-store-links">
+                <span>{% trans "Compare your options" %}</span>
+                <a href="{% url 'store_compare' product.id %}">{% trans "Compare store prices" %} ↗</a>
+            </div>
+        </div>
+    </div>
+    <section class="sc-price-comparison">
+        <div class="sc-price-heading"><div><span class="product-category">{% trans "PRICE CHECK" %}</span><h2>{% trans "Choose where to buy" %}</h2></div><p>{% trans "Compare all three prices before checkout." %}</p></div>
+        <div class="sc-price-options">
+            {% for option in store_options %}
+            <article class="sc-price-option {% if option.key == best_option.key %}is-best{% endif %}">
+                {% if option.key == 'smartchoice' %}<div class="sc-smartchoice-badge">✓ smartchoice</div>
+                {% elif option.key == 'amazon' %}<img class="sc-store-logo" src="{% static 'images/amazon-logo.svg' %}" alt="Amazon">
+                {% else %}<img class="sc-store-logo" src="{% static 'images/flipkart-logo.svg' %}" alt="Flipkart">{% endif %}
+                {% if option.key == best_option.key %}<span class="sc-best-label">{% trans "Best price" %}</span>{% endif %}
+                <strong class="sc-option-price">₹{{ option.price }}</strong>
+                <small>{{ option.offer }}</small>
+                <a href="{{ option.url }}" {% if not option.internal %}target="_blank" rel="noopener noreferrer"{% endif %} class="{% if option.internal %}btn-pink{% else %}sc-market-button{% endif %}">{% if option.internal %}{% trans "Buy on Smart Choice" %}{% else %}{% trans "View deal" %} ↗{% endif %}</a>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="sc-saving-note">{% trans "Difference between highest and best price" %}: <strong>₹{{ you_save }}</strong></div>
+    </section>
+    <section class="sc-detail-specs">
+        <h2>{% trans "Product details" %}</h2>
+        <div class="spec-grid">
+            <div><small>{% trans "RAM" %}</small><strong>{{ product.ram|default:"—" }}</strong></div>
+            <div><small>{% trans "Storage" %}</small><strong>{{ product.storage|default:"—" }}</strong></div>
+            <div><small>{% trans "Processor" %}</small><strong>{{ product.processor|default:"—" }}</strong></div>
+            <div><small>{% trans "Battery" %}</small><strong>{{ product.battery|default:"—" }}</strong></div>
+            <div><small>{% trans "Display" %}</small><strong>{{ product.display|default:"—" }}</strong></div>
+            <div><small>{% trans "GPU" %}</small><strong>{{ product.gpu|default:"—" }}</strong></div>
+            <div><small>{% trans "Camera" %}</small><strong>{{ product.camera|default:"—" }}</strong></div>
+            <div><small>{% trans "Usage" %}</small><strong>{{ product.usage|default:"—" }}</strong></div>
+        </div>
+    </section>
+</div>
+{% endblock %}

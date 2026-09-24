@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "AI Recommendation" %} | Smart Choice
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container py-5">
+
+
+    <div class="sc-recommend-top">
+    <!-- HEADER -->
+
+    <div class="recommend-header">
+
+        <span class="product-category">
+            🤖 {% trans "Smart Recommendation" %}
+        </span>
+
+        <h1>
+            {% trans "Tell Us What You Need" %}
+        </h1>
+
+        <p>
+            {% trans "Describe your budget and purpose. We'll find suitable products from our database." %}
+        </p>
+
+    </div>
+
+
+    <!-- QUERY FORM -->
+
+    <div class="recommend-box">
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label>
+                {% trans "What are you looking for?" %}
+            </label>
+
+            <textarea
+                name="query"
+                rows="4"
+                class="form-control"
+                placeholder="{% trans 'Example: I need a laptop below 60000 for development with 16GB RAM...' %}"
+                required>{{ query }}</textarea>
+
+
+            <button
+                type="submit"
+                class="btn-pink">
+
+                ✨ {% trans "Find My Best Product" %}
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    </div>
+
+    {% if ai_answer %}
+
+    <div class="ai-answer-card">
+       
+        <div class="ai-answer-title">
+             🤖 {% trans "Smart Choice AI" %}
+        </div>
+
+        <p>
+            {{ ai_answer }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+    {% if recommendations %}
+
+        {% if ai_explanation %}
+
+        <div class="ai-explanation">
+
+            <div class="ai-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <h3>
+                    {% trans "Why We Recommend This" %}
+                </h3>
+
+                <p>
+                    {{ ai_explanation }}
+                </p>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+    <!-- RESULTS -->
+
+    <div class="recommend-results">
+
+        <h2>
+            {% trans "Recommended Products" %}
+        </h2>
+
+        <p>
+            {% trans "Based on your requirements:" %}
+        </p>
+
+
+        <div class="row g-4">
+
+            {% for product in recommendations %}
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    {% if product.image %}
+
+                    <img
+                        src="{{ product.image.url }}"
+                        class="product-image"
+                        alt="{{ product.name }}">
+
+                    {% else %}
+
+                    <div class="product-placeholder">
+
+                        {% if product.category == "mobile" %}
+                            📱
+                        {% else %}
+                            💻
+                        {% endif %}
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+
+                            {{ product.category|title }}
+
+                        </span>
+
+
+                        <h4>
+
+                            {{ product.brand }}
+                            {{ product.name }}
+
+                        </h4>
+
+
+                        <p>
+
+                            ⭐ {{ product.rating }}
+                            <br>
+
+                            {% trans "RAM" %}: {{ product.ram }}
+                            <br>
+
+                            {% trans "Storage" %}: {{ product.storage }}
+
+                        </p>
+
+
+                        <div class="product-meta">
+
+                            <strong>
+                                ₹{{ product.price }}
+                            </strong>
+
+                        </div>
+
+
+                        <a
+                            href="/product/{{ product.id }}/"
+                            class="btn-pink product-btn">
+
+                            {% trans "View Product" %}
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+</div>
+
+{% endblock %}

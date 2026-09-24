@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{{ product.brand }} {{ product.name }} - {% trans "Price Comparison" %}{% endblock %}
+{% block content %}
+<div class="container py-5 sc-store-comparison-page">
+    <div class="compare-header">
+        <span class="product-category">{% trans "SMART PRICE COMPARISON" %}</span>
+        <h1>{{ product.brand }} {{ product.name }}</h1>
+        <p>{% trans "Compare three buying options and choose the price that works for you." %}</p>
+    </div>
+    <div class="sc-compare-product-summary">
+        {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.brand }} {{ product.name }}">{% endif %}
+        <div><span>{{ product.category|title }}</span><h2>{{ product.brand }} {{ product.name }}</h2><p>★ {{ product.rating }} / 5</p></div>
+    </div>
+    <div class="sc-price-options sc-price-options-large">
+        {% for option in store_options %}
+        <article class="sc-price-option {% if option.key == best_option.key %}is-best{% endif %}">
+            {% if option.key == 'smartchoice' %}<div class="sc-smartchoice-badge">✓ smartchoice</div>
+            {% elif option.key == 'amazon' %}<img class="sc-store-logo" src="{% static 'images/amazon-logo.svg' %}" alt="Amazon">
+            {% else %}<img class="sc-store-logo" src="{% static 'images/flipkart-logo.svg' %}" alt="Flipkart">{% endif %}
+            {% if option.key == best_option.key %}<span class="sc-best-label">🏆 {% trans "BEST PRICE" %}</span>{% endif %}
+            <strong class="sc-option-price">₹{{ option.price }}</strong>
+            {% if option.rating %}<p>⭐ {{ option.rating }}</p>{% endif %}
+            <p>🚚 {{ option.delivery }}</p>
+            <p>🏷️ {{ option.offer }}</p>
+            <a href="{{ option.url }}" {% if not option.internal %}target="_blank" rel="noopener noreferrer"{% endif %} class="{% if option.internal %}btn-pink{% else %}sc-market-button{% endif %}">{% if option.internal %}{% trans "Buy on Smart Choice" %}{% else %}{% trans "View deal" %} ↗{% endif %}</a>
+        </article>
+        {% endfor %}
+    </div>
+    <div class="sc-price-result"><span>{% trans "Best available price" %}</span><strong>₹{{ best_option.price }}</strong><span>{% trans "You can save up to" %} ₹{{ you_save }}</span></div>
+</div>
+{% endblock %}

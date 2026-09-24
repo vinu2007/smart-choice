@@ -1,0 +1,495 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Products" %} | Smart Choice
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- HEADER -->
+    <div class="listing-header mb-4">
+
+        <span class="product-category">
+            {% trans "Smart Product Finder" %}
+        </span>
+
+        <h1>
+            {% trans "Find Your Perfect Device" %}
+        </h1>
+
+        <p>
+            {% trans "Search and filter mobiles and laptops based on your needs." %}
+        </p>
+
+    </div>
+
+
+    <!-- FILTER PANEL -->
+    <div class="filter-panel mb-5">
+
+        <form method="GET">
+
+            <div class="row g-3">
+
+                <!-- SEARCH -->
+                <div class="col-lg-4">
+                    <label>{% trans "Search" %}</label>
+
+                    <input
+                        type="text"
+                        name="search"
+                        value="{{ search }}"
+                        class="form-control"
+                        placeholder="{% trans 'Search mobile, laptop, brand...' %}"
+                    >
+                </div>
+
+
+                <!-- CATEGORY -->
+                <div class="col-lg-2">
+                    <label>{% trans "Category" %}</label>
+
+                    <select
+                        name="category"
+                        class="form-select"
+                    >
+
+                        <option value="">
+                            {% trans "All" %}
+                        </option>
+
+                        <option
+                            value="mobile"
+                            {% if category == "mobile" %}selected{% endif %}
+                        >
+                            {% trans "Mobiles" %}
+                        </option>
+
+                        <option
+                            value="laptop"
+                            {% if category == "laptop" %}selected{% endif %}
+                        >
+                            {% trans "Laptops" %}
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- BRAND -->
+                <div class="col-lg-2">
+                    <label>{% trans "Brand" %}</label>
+
+                    <div class="custom-brand-dropdown">
+
+                        <button
+                            type="button"
+                            class="brand-dropdown-btn"
+                            id="brandDropdownBtn">
+
+                            <span id="selectedBrand">
+                                {% if brand %}
+                                    {{ brand }}
+                                {% else %}
+                                    {% trans "All Brands" %}
+                                {% endif %}
+                            </span>
+
+                            <span class="dropdown-arrow">▼</span>
+
+                        </button>
+
+
+                        <div
+                            class="brand-dropdown-menu"
+                            id="brandDropdownMenu">
+
+                            <div
+                                class="brand-option {% if not brand %}active{% endif %}"
+                                data-value="">
+
+                                {% trans "All Brands" %}
+
+                            </div>
+
+
+                            {% for b in brands %}
+
+                                <div
+                                    class="brand-option {% if brand == b %}active{% endif %}"
+                                    data-value="{{ b }}">
+
+                                    {{ b }}
+
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+
+
+                        <!-- Actual value sent to Django -->
+                        <input
+                            type="hidden"
+                            name="brand"
+                            id="brandInput"
+                            value="{{ brand }}"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+                <div class="col-lg-2">
+                    <label>{% trans "Max Price" %}</label>
+
+                    <input
+                        type="number"
+                        name="max_price"
+                        value="{{ max_price }}"
+                        class="form-control"
+                        placeholder="₹ 60000"
+                    >
+                </div>
+
+
+                <!-- RATING -->
+                <div class="col-lg-2">
+                    <label>{% trans "Rating" %}</label>
+
+                    <select
+                        name="min_rating"
+                        class="form-select"
+                    >
+
+                        <option value="">
+                            {% trans "Any Rating" %}
+                        </option>
+
+                        <option
+                            value="4"
+                            {% if min_rating == "4" %}selected{% endif %}
+                        >
+                            4+ ⭐
+                        </option>
+
+                        <option
+                            value="4.5"
+                            {% if min_rating == "4.5" %}selected{% endif %}
+                        >
+                            4.5+ ⭐
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="col-12">
+
+                    <button
+                        type="submit"
+                        class="btn-pink"
+                    >
+                        🔎 {% trans "Apply Filters" %}
+                    </button>
+
+                    <a
+                        href="/products/"
+                        class="clear-btn"
+                    >
+                        {% trans "Clear" %}
+                    </a>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- RESULT COUNT -->
+    <div class="results-header mb-4">
+
+        <h3>
+            {{ products|length }} {% trans "Products Found" %}
+        </h3>
+
+    </div>
+
+
+    <!-- COMPARE FORM -->
+    <form
+        method="GET"
+        action="/compare/"
+        id="compare-form"
+    >
+
+        <!-- COMPARE MENU -->
+
+        <div class="compare-menu">
+
+            <div>
+                <h3>{% trans "Compare Products" %}</h3>
+
+                <p>
+                    {% trans "Select up to 3 products and compare them." %}
+                </p>
+            </div>
+
+            <button
+                type="submit"
+                class="btn-pink compare-btn"
+            >
+                ⚖️ {% trans "Compare Selected" %}
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTS GRID -->
+        <div class="products-grid">
+
+            {% for product in products %}
+
+            <div class="product-card {% if product.category == 'mobile' %}mobile-card{% else %}laptop-card{% endif %}">
+
+                <!-- IMAGE -->
+                {% if product.image %}
+
+                    <img
+                        src="{{ product.image.url }}"
+                        alt="{{ product.name }}"
+                        class="product-image"
+                    >
+
+                {% else %}
+
+                    <div class="product-placeholder">
+
+                        {% if product.category == "mobile" %}
+                            📱
+                        {% else %}
+                            💻
+                        {% endif %}
+
+                    </div>
+
+                {% endif %}
+
+
+                <!-- PRODUCT INFO -->
+                <div class="product-info">
+
+                    <span class="product-category">
+                        {{ product.category|title }}
+                    </span>
+
+                    <h4>
+                        {{ product.brand }}
+                        {{ product.name }}
+                    </h4>
+
+                    <p class="product-processor">
+                        {{ product.processor }}
+                    </p>
+
+                    {% if product.usage %}
+                    <p class="product-usage">
+                        {{ product.usage }}
+                    </p>
+                    {% endif %}
+
+
+                    <div class="product-meta">
+
+                        <span>
+                            ⭐ {{ product.rating }}
+                        </span>
+
+                        <strong>
+                            ₹{{ product.price }}
+                        </strong>
+
+                    </div>
+
+
+                    <!-- VIEW DETAILS -->
+                    <a
+                        href="/product/{{ product.id }}/"
+                        class="btn-pink product-btn"
+                    >
+                        {% trans "View Details" %}
+                    </a>
+
+                    <a
+                        href="{% url 'add_to_cart' product.id %}"
+                        class="btn-cart"
+                    >
+                        🛒 {% trans "Add to Cart" %}
+                    </a>
+
+
+                    <!-- COMPARE -->
+                    <div class="compare-select">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="products"
+                                value="{{ product.id }}"
+                                class="compare-checkbox"
+                            >
+
+                            {% trans "Compare" %}
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="empty-products">
+
+                <div style="font-size:60px;">
+                    🔍
+                </div>
+
+                <h3>
+                    {% trans "No products found" %}
+                </h3>
+
+                <p>
+                    {% trans "Try changing your search or filter options." %}
+                </p>
+
+                <a
+                    href="/products/"
+                    class="btn-pink"
+                >
+                    {% trans "Clear Filters" %}
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- COMPARE BUTTON -->
+        {% if products %}
+
+        {% endif %}
+
+    </form>
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const checkboxes = document.querySelectorAll(
+        'input[name="products"]'
+    );
+
+    checkboxes.forEach(function (checkbox) {
+
+        checkbox.addEventListener("change", function () {
+
+            const selected = document.querySelectorAll(
+                'input[name="products"]:checked'
+            );
+
+            console.log("Selected:", selected.length);
+
+            if (selected.length > 3) {
+
+                this.checked = false;
+
+                alert(
+                    "You can compare only 3 products at a time."
+                );
+            }
+
+        });
+
+    });
+
+});
+
+// =========================================
+// CUSTOM BRAND DROPDOWN
+// =========================================
+
+const brandBtn = document.getElementById("brandDropdownBtn");
+const brandMenu = document.getElementById("brandDropdownMenu");
+const brandInput = document.getElementById("brandInput");
+const selectedBrand = document.getElementById("selectedBrand");
+
+if (brandBtn && brandMenu) {
+
+    brandBtn.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        brandMenu.classList.toggle("show");
+
+    });
+
+
+    const brandOptions = document.querySelectorAll(".brand-option");
+
+    brandOptions.forEach(function (option) {
+
+        option.addEventListener("click", function () {
+
+            const value = this.dataset.value;
+            const text = this.textContent.trim();
+
+            brandInput.value = value;
+            selectedBrand.textContent = text;
+
+            brandOptions.forEach(function (item) {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            brandMenu.classList.remove("show");
+
+        });
+
+    });
+
+
+    document.addEventListener("click", function (event) {
+
+        if (!brandBtn.contains(event.target) &&
+            !brandMenu.contains(event.target)) {
+
+            brandMenu.classList.remove("show");
+
+        }
+
+    });
+
+}
+</script>
+
+{% endblock %}

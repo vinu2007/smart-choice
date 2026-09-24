@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Login - Smart Choice{% endblock %}
+{% block content %}
+<div class="login-wrapper">
+
+        <div class="login-card">
+
+            <!-- LOCK ICON -->
+            <div class="login-icon">
+                🔐
+            </div>
+
+            <!-- TITLE -->
+            <h1>
+                {% trans "Sign in to" %} <span>Smart Choice</span>
+            </h1>
+
+            <p class="login-subtitle">
+                {% trans "Welcome back! Continue your smart shopping journey." %}
+            </p>
+
+
+            {% if error %}
+                <div class="login-error">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <input type="hidden"
+                       name="next"
+                       value="{{ request.GET.next }}">
+
+
+                <!-- USERNAME -->
+                <div class="login-group">
+
+                    <label>{% trans "Username" %}</label>
+
+                    <div class="login-input">
+
+                        <span>♟</span>
+
+                        <input type="text"
+                               name="username"
+                               placeholder="{% trans 'Enter your username' %}"
+                               required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="login-group">
+
+                    <label>{% trans "Password" %}</label>
+
+                    <div class="login-input">
+
+                        <span>🔒</span>
+
+                        <input type="password"
+                               name="password"
+                               placeholder="{% trans 'Enter your password' %}"
+                               required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REMEMBER + FORGOT -->
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        {% trans "Remember me" %}
+                    </label>
+
+                    <a href="#">
+                        {% trans "Forgot Password?" %}
+                    </a>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <button type="submit" class="login-button">
+
+                    {% trans "Login to Smart Choice" %}
+
+                    <span>→</span>
+
+                </button>
+
+            </form>
+
+
+            <!-- OR -->
+            <div class="login-divider">
+                <span>{% trans "or" %}</span>
+            </div>
+
+
+            <!-- INFO -->
+            <div class="login-info">
+
+                <div class="info-box">
+
+                    <div class="info-symbol">
+                        🛡️
+                    </div>
+
+                    <div>
+                        <strong>{% trans "Safe & Secure" %}</strong>
+                        <small>{% trans "Your account is protected" %}</small>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-symbol">
+                        ✨
+                    </div>
+
+                    <div>
+                        <strong>{% trans "Smart Choices" %}</strong>
+                        <small>{% trans "Personalized recommendations" %}</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIGNUP -->
+            <p class="create-account">
+                {% trans "Don't have an account?" %}
+                <a href="/signup/">{% trans "Create Account" %}</a>
+            </p>
+
+        </div>
+
+    </div>
+{% endblock %}

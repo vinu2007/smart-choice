@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Sign Up - Smart Choice{% endblock %}
+{% block content %}
+<div class="signup-container">
+
+    <div class="signup-card">
+
+        <!-- TOP ICON -->
+        <div class="signup-icon">
+            <span class="user-icon">👤</span>
+        </div>
+
+
+        <!-- TITLE -->
+        <h1>
+            {% trans "Sign up to" %} <span>Smart Choice</span>
+        </h1>
+
+        <p class="signup-subtitle">
+            {% trans "Create your account to get started" %}
+        </p>
+
+
+        {% if error %}
+        <div class="signup-error">
+            {{ error }}
+        </div>
+        {% endif %}
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <!-- FULL NAME -->
+            <div class="signup-field">
+
+                <label>{% trans "Full Name" %}</label>
+
+                <div class="signup-input">
+
+                    <span class="field-icon">👤</span>
+
+                    <input
+                        type="text"
+                        name="full_name"
+                        placeholder="{% trans 'Enter your full name' %}"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- USERNAME -->
+            <div class="signup-field">
+
+                <label>{% trans "Username" %}</label>
+
+                <div class="signup-input">
+
+                    <span class="field-icon">👤</span>
+
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="{% trans 'Choose a username' %}"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="signup-field">
+
+                <label>{% trans "Email" %}</label>
+
+                <div class="signup-input">
+
+                    <span class="field-icon">✉</span>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="{% trans 'Enter your email address' %}"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="signup-field">
+
+                <label>{% trans "Password" %}</label>
+
+                <div class="signup-input">
+
+                    <span class="field-icon">🔒</span>
+
+                    <input
+                        type="password"
+                        name="password"
+                        id="signupPassword"
+                        placeholder="{% trans 'Create a password' %}"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="eye-button"
+                        onclick="togglePassword('signupPassword', this)"
+                        aria-label="{% trans 'Show password' %}"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="signup-field">
+
+                <label>{% trans "Confirm Password" %}</label>
+
+                <div class="signup-input">
+
+                    <span class="field-icon">🔒</span>
+
+                    <input
+                        type="password"
+                        name="confirm_password"
+                        id="confirmPassword"
+                        placeholder="{% trans 'Confirm your password' %}"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="eye-button"
+                        onclick="togglePassword('confirmPassword', this)"
+                        aria-label="{% trans 'Show password' %}"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERMS -->
+            <div class="terms-area">
+
+                <label class="terms-label">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        {% trans "I agree to the" %}
+                        <a href="#">{% trans "Terms & Conditions" %}</a>
+                        {% trans "and" %}
+                        <a href="#">{% trans "Privacy Policy" %}</a>
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- BUTTON -->
+            <button
+                type="submit"
+                class="create-account-btn"
+            >
+
+                <span>{% trans "Create Account" %}</span>
+
+                <span class="button-arrow">→</span>
+
+            </button>
+
+        </form>
+
+
+        <!-- LOGIN -->
+        <div class="already-account">
+
+            {% trans "Already have an account?" %}
+
+            <a href="/login/">{% trans "Login" %}</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function togglePassword(inputId, button) {
+
+    const input = document.getElementById(inputId);
+
+    if (input.type === "password") {
+
+        input.type = "text";
+
+        button.textContent = "🙈";
+
+    } else {
+
+        input.type = "password";
+
+        button.textContent = "👁";
+
+    }
+
+}
+
+</script>
+{% endblock %}

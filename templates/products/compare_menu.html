@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}
+{% trans "Compare" %} - Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="compare-header"><span class="product-category">{% trans "MAKE A CLEAR CHOICE" %}</span><h1>{% trans "Compare your options" %}</h1><p>{% trans "See products and prices side by side before you decide." %}</p></div>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- PRODUCT VS PRODUCT -->
+
+        <div class="col-md-5">
+
+            <div class="compare-menu-card">
+
+                <div class="sc-compare-visual sc-product-compare-visual"><img src="{% static 'images/smartphone.jpeg' %}" alt="{% trans 'Smartphone comparison' %}"><span>VS</span><img src="{% static 'images/laptop.jpeg' %}" alt="{% trans 'Laptop comparison' %}"></div>
+                <h2>{% trans "Product vs Product" %}</h2>
+
+                <p>
+                    {% trans "Compare two different products side by side." %}
+                </p>
+
+                <a
+                    href="{% url 'compare' %}"
+                    class="btn-pink"
+                >
+                    {% trans "Compare Products" %}
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STORE VS STORE -->
+
+        <div class="col-md-5">
+
+            <div class="compare-menu-card">
+
+                <div class="sc-compare-visual sc-store-compare-visual"><img src="{% static 'images/amazon-logo.svg' %}" alt="Amazon"><span>VS</span><img src="{% static 'images/flipkart-logo.svg' %}" alt="Flipkart"></div>
+                <h2>{% trans "Store vs Store" %}</h2>
+
+                <p>
+                    {% trans "Compare Smart Choice with leading online marketplace prices." %}
+                </p>
+
+                <a
+                    href="{% url 'store_compare_select' %}"
+                    class="btn-pink"
+                >
+                    {% trans "Compare Stores" %}
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

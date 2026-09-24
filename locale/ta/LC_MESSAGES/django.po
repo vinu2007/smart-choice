@@ -1,0 +1,2305 @@
+# Smart Choice Tamil Translation
+# Copyright (C) 2026
+# Smart Choice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Choice\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-10 20:35+0530\n"
+"PO-Revision-Date: 2026-09-04 21:00+0530\n"
+"Last-Translator: Smart Choice\n"
+"Language-Team: Tamil\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\base.html:76
+msgid "Home"
+msgstr "முகப்பு"
+
+#: .\templates\base.html:82 .\templates\products\product_list.html:69
+msgid "Mobiles"
+msgstr "மொபைல்கள்"
+
+#: .\templates\base.html:88 .\templates\home.html:90 .\templates\home.html:94
+#: .\templates\products\product_list.html:76
+msgid "Laptops"
+msgstr "லேப்டாப்கள்"
+
+#: .\templates\base.html:94 .\templates\products\compare_menu.html:5
+#: .\templates\products\compare_menu.html:13
+#: .\templates\products\product_list.html:353
+msgid "Compare"
+msgstr "ஒப்பிடுக"
+
+#: .\templates\base.html:100 .\templates\products\recommend.html:5
+msgid "AI Recommendation"
+msgstr "AI பரிந்துரை"
+
+#: .\templates\base.html:106 .\templates\products\account.html:5
+#: .\templates\products\account.html:14
+msgid "Account"
+msgstr "கணக்கு"
+
+#: .\templates\home.html:6 .\templates\products\product_list.html:17
+msgid "Smart Product Finder"
+msgstr "ஸ்மார்ட் தயாரிப்பு தேடுபொறி"
+
+#: .\templates\home.html:18
+msgid "AI-Powered Product Discovery"
+msgstr "AI மூலம் தயாரிப்பு கண்டறிதல்"
+
+#: .\templates\home.html:22
+msgid "Find the"
+msgstr "கண்டறியுங்கள்"
+
+#: .\templates\home.html:23
+msgid "Perfect Device"
+msgstr "சரியான சாதனத்தை"
+
+#: .\templates\home.html:24
+msgid "for You."
+msgstr "உங்களுக்காக."
+
+#: .\templates\home.html:28
+msgid ""
+"Compare mobiles and laptops, discover the right specifications, and get "
+"smart recommendations based on your budget and usage."
+msgstr ""
+"மொபைல்கள் மற்றும் லேப்டாப்களை ஒப்பிட்டு, சரியான விவரக்குறிப்புகளைக் கண்டறிந்து, உங்கள் "
+"பட்ஜெட் மற்றும் பயன்பாட்டின் அடிப்படையில் சிறந்த பரிந்துரைகளைப் பெறுங்கள்."
+
+#: .\templates\home.html:32 .\templates\products\cart.html:174
+#: .\templates\products\checkout.html:425
+#: .\templates\products\my_orders.html:106
+msgid "Explore Products"
+msgstr "தயாரிப்புகளை ஆராயுங்கள்"
+
+#: .\templates\home.html:47
+msgid "Explore Categories"
+msgstr "வகைகளை ஆராயுங்கள்"
+
+#: .\templates\home.html:61 .\templates\home.html:65
+msgid "Smartphones"
+msgstr "ஸ்மார்ட்போன்கள்"
+
+#: .\templates\home.html:69
+msgid "Find mobiles based on price, RAM, storage, camera and performance."
+msgstr ""
+"விலை, RAM, சேமிப்பு, கேமரா மற்றும் செயல்திறன் ஆகியவற்றின் அடிப்படையில் மொபைல்களைக் "
+"கண்டறியுங்கள்."
+
+#: .\templates\home.html:73
+msgid "Explore Smartphones"
+msgstr "ஸ்மார்ட்போன்களை ஆராயுங்கள்"
+
+#: .\templates\home.html:98
+msgid "Find laptops for gaming, development, study and professional work."
+msgstr "கேமிங், மேம்பாடு, படிப்பு மற்றும் தொழில்முறை வேலைக்கான லேப்டாப்களைக் கண்டறியுங்கள்."
+
+#: .\templates\home.html:102
+msgid "Explore Laptops"
+msgstr "லேப்டாப்களை ஆராயுங்கள்"
+
+#: .\templates\home.html:123
+msgid "Popular Products"
+msgstr "பிரபலமான தயாரிப்புகள்"
+
+#: .\templates\home.html:146
+msgid "Smartphone"
+msgstr "ஸ்மார்ட்போன்"
+
+#: .\templates\home.html:148
+msgid "Laptop"
+msgstr "லேப்டாப்"
+
+#: .\templates\home.html:187 .\templates\products\my_orders.html:77
+#: .\templates\products\product_list.html:330
+msgid "View Details"
+msgstr "விவரங்களைப் பார்க்கவும்"
+
+#: .\templates\home.html:205
+msgid "No products available yet."
+msgstr "தற்போது தயாரிப்புகள் எதுவும் கிடைக்கவில்லை."
+
+#: .\templates\home.html:209
+msgid "Add products from the Admin Panel."
+msgstr "Admin Panel-லிருந்து தயாரிப்புகளைச் சேர்க்கவும்."
+
+#: .\templates\home.html:218
+msgid "Open Admin"
+msgstr "Admin-ஐ திறக்கவும்"
+
+#: .\templates\login.html:10 .\templates\products\account.html:29
+#: .\templates\signup.html:220
+msgid "Login"
+msgstr "உள்நுழையவும்"
+
+#: .\templates\login.html:34
+msgid "Sign in to"
+msgstr "உள்நுழையவும்"
+
+#: .\templates\login.html:38
+msgid "Welcome back! Continue your smart shopping journey."
+msgstr "மீண்டும் வரவேற்கிறோம்! உங்கள் ஸ்மார்ட் ஷாப்பிங் பயணத்தைத் தொடருங்கள்."
+
+#: .\templates\login.html:61 .\templates\products\account.html:46
+#: .\templates\products\edit_profile.html:31 .\templates\signup.html:77
+msgid "Username"
+msgstr "பயனர்பெயர்"
+
+#: .\templates\login.html:69
+msgid "Enter your username"
+msgstr "உங்கள் பயனர்பெயரை உள்ளிடவும்"
+
+#: .\templates\login.html:80 .\templates\signup.html:119
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+#: .\templates\login.html:88
+msgid "Enter your password"
+msgstr "உங்கள் கடவுச்சொல்லை உள்ளிடவும்"
+
+#: .\templates\login.html:101
+msgid "Remember me"
+msgstr "என்னை நினைவில் வைத்துக்கொள்ளவும்"
+
+#: .\templates\login.html:105
+msgid "Forgot Password?"
+msgstr "கடவுச்சொல்லை மறந்துவிட்டீர்களா?"
+
+#: .\templates\login.html:114
+msgid "Login to Smart Choice"
+msgstr "Smart Choice-ல் உள்நுழையவும்"
+
+#: .\templates\login.html:125 .\venv\Lib\site-packages\django\utils\text.py:282
+msgid "or"
+msgstr "அல்லது"
+
+#: .\templates\login.html:139
+msgid "Safe & Secure"
+msgstr "பாதுகாப்பானது மற்றும் நம்பகமானது"
+
+#: .\templates\login.html:140
+msgid "Your account is protected"
+msgstr "உங்கள் கணக்கு பாதுகாக்கப்பட்டுள்ளது"
+
+#: .\templates\login.html:153
+msgid "Smart Choices"
+msgstr "ஸ்மார்ட் தேர்வுகள்"
+
+#: .\templates\login.html:154
+#, fuzzy
+#| msgid "Smart Recommendation"
+msgid "Personalized recommendations"
+msgstr "ஸ்மார்ட் பரிந்துரை"
+
+#: .\templates\login.html:164
+msgid "Don't have an account?"
+msgstr "உங்களிடம் கணக்கு இல்லையா?"
+
+#: .\templates\login.html:165 .\templates\signup.html:206
+#, fuzzy
+#| msgid "Account"
+msgid "Create Account"
+msgstr "கணக்கு"
+
+#: .\templates\products\account.html:19
+msgid "Welcome,"
+msgstr "வரவேற்கிறோம்,"
+
+#: .\templates\products\account.html:25
+msgid "Login to access your Smart Choice account"
+msgstr "உங்கள் Smart Choice கணக்கை அணுக உள்நுழையவும்"
+
+#: .\templates\products\account.html:43
+msgid "Profile Details"
+msgstr "சுயவிவர விவரங்கள்"
+
+#: .\templates\products\account.html:51
+#: .\templates\products\edit_profile.html:48 .\templates\signup.html:98
+msgid "Email"
+msgstr "மின்னஞ்சல்"
+
+#: .\templates\products\account.html:56
+msgid "Not added"
+msgstr "சேர்க்கப்படவில்லை"
+
+#: .\templates\products\account.html:62
+msgid "Account Status"
+msgstr "கணக்கு நிலை"
+
+#: .\templates\products\account.html:63
+msgid "Active"
+msgstr "செயலில் உள்ளது"
+
+#: .\templates\products\account.html:70
+#: .\templates\products\edit_profile.html:5
+#: .\templates\products\edit_profile.html:14
+msgid "Edit Profile"
+msgstr "சுயவிவரத்தைத் திருத்தவும்"
+
+#: .\templates\products\account.html:80
+msgid "My Shopping"
+msgstr "எனது ஷாப்பிங்"
+
+#: .\templates\products\account.html:84 .\templates\products\my_orders.html:5
+#: .\templates\products\my_orders.html:14
+msgid "My Orders"
+msgstr "எனது ஆர்டர்கள்"
+
+#: .\templates\products\account.html:87 .\templates\products\account.html:97
+#: .\templates\products\compare.html:289
+msgid "View"
+msgstr "பார்க்கவும்"
+
+#: .\templates\products\account.html:94 .\templates\products\cart.html:5
+#: .\templates\products\cart.html:19
+msgid "My Cart"
+msgstr "எனது கார்ட்"
+
+#: .\templates\products\account.html:111
+msgid "Account Settings"
+msgstr "கணக்கு அமைப்புகள்"
+
+#: .\templates\products\account.html:119 .\templates\products\account.html:225
+msgid "Select Language"
+msgstr "மொழியைத் தேர்ந்தெடுக்கவும்"
+
+#: .\templates\products\account.html:134 .\templates\products\account.html:282
+msgid "Notification Settings"
+msgstr "அறிவிப்பு அமைப்புகள்"
+
+#: .\templates\products\account.html:149 .\templates\products\account.html:329
+msgid "Help Center"
+msgstr "உதவி மையம்"
+
+#: .\templates\products\account.html:172 .\templates\products\account.html:390
+msgid "Terms, Policies and Licenses"
+msgstr "விதிமுறைகள், கொள்கைகள் மற்றும் உரிமங்கள்"
+
+#: .\templates\products\account.html:187
+msgid "Browse FAQs"
+msgstr "அடிக்கடி கேட்கப்படும் கேள்விகளைப் பார்க்கவும்"
+
+#: .\templates\products\account.html:203
+msgid "Logout"
+msgstr "வெளியேறவும்"
+
+#: .\templates\products\account.html:227
+msgid "Choose your preferred language."
+msgstr "உங்களுக்கு விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்."
+
+#: .\templates\products\account.html:285
+msgid "Manage your Smart Choice notifications."
+msgstr "உங்கள் Smart Choice அறிவிப்புகளை நிர்வகிக்கவும்."
+
+#: .\templates\products\account.html:291
+msgid "Smart Choice Notifications"
+msgstr "Smart Choice அறிவிப்புகள்"
+
+#: .\templates\products\account.html:309
+msgid "Notifications are OFF"
+msgstr "அறிவிப்புகள் முடக்கப்பட்டுள்ளன"
+
+#: .\templates\products\account.html:331
+msgid "How can we help you?"
+msgstr "நாங்கள் உங்களுக்கு எவ்வாறு உதவ முடியும்?"
+
+#: .\templates\products\account.html:337
+msgid "How do I find a mobile or laptop?"
+msgstr "மொபைல் அல்லது லேப்டாப்பை எவ்வாறு கண்டுபிடிப்பது?"
+
+#: .\templates\products\account.html:341
+msgid "Open Mobiles or Laptops from the sidebar and use the available filters."
+msgstr ""
+"Sidebar-ல் உள்ள மொபைல்கள் அல்லது லேப்டாப்களைத் திறந்து, கிடைக்கும் வடிகட்டிகளைப் "
+"பயன்படுத்தவும்."
+
+#: .\templates\products\account.html:350
+msgid "How does AI Recommendation work?"
+msgstr "AI பரிந்துரை எவ்வாறு செயல்படுகிறது?"
+
+#: .\templates\products\account.html:354
+msgid ""
+"Enter your requirement in AI Recommendation and Smart Choice will suggest a "
+"suitable product."
+msgstr ""
+"AI பரிந்துரையில் உங்கள் தேவையை உள்ளிடுங்கள். Smart Choice உங்களுக்கு ஏற்ற தயாரிப்பைப் "
+"பரிந்துரைக்கும்."
+
+#: .\templates\products\account.html:363
+msgid "How can I compare products?"
+msgstr "தயாரிப்புகளை எவ்வாறு ஒப்பிடுவது?"
+
+#: .\templates\products\account.html:367
+msgid ""
+"Select products and use the Compare option to compare their specifications."
+msgstr ""
+"தயாரிப்புகளைத் தேர்ந்தெடுத்து, அவற்றின் விவரக்குறிப்புகளை ஒப்பிட Compare விருப்பத்தைப் "
+"பயன்படுத்தவும்."
+
+#: .\templates\products\account.html:394 .\templates\signup.html:190
+msgid "Terms & Conditions"
+msgstr "விதிமுறைகள் மற்றும் நிபந்தனைகள்"
+
+#: .\templates\products\account.html:397
+msgid ""
+"Smart Choice is an academic web application designed to help users find, "
+"compare and select suitable products."
+msgstr ""
+"Smart Choice என்பது பயனர்கள் பொருத்தமான தயாரிப்புகளைக் கண்டறிந்து, ஒப்பிட்டு, "
+"தேர்ந்தெடுக்க உதவும் ஒரு கல்வி சார்ந்த வலை பயன்பாடாகும்."
+
+#: .\templates\products\account.html:401 .\templates\signup.html:192
+msgid "Privacy Policy"
+msgstr "தனியுரிமைக் கொள்கை"
+
+#: .\templates\products\account.html:404
+msgid ""
+"User information is used for providing account and application features."
+msgstr "கணக்கு மற்றும் பயன்பாட்டு அம்சங்களை வழங்க பயனர் தகவல்கள் பயன்படுத்தப்படுகின்றன."
+
+#: .\templates\products\account.html:408
+msgid "Licenses"
+msgstr "உரிமங்கள்"
+
+#: .\templates\products\account.html:411
+msgid ""
+"Smart Choice uses technologies such as Django, Python, Bootstrap, HTML, CSS "
+"and JavaScript."
+msgstr ""
+"Smart Choice Django, Python, Bootstrap, HTML, CSS மற்றும் JavaScript போன்ற "
+"தொழில்நுட்பங்களைப் பயன்படுத்துகிறது."
+
+#: .\templates\products\account.html:432
+msgid "Frequently Asked Questions"
+msgstr "அடிக்கடி கேட்கப்படும் கேள்விகள்"
+
+#: .\templates\products\account.html:438
+msgid "What is Smart Choice?"
+msgstr "Smart Choice என்றால் என்ன?"
+
+#: .\templates\products\account.html:441
+msgid "Smart Choice helps users find and compare mobiles and laptops."
+msgstr "Smart Choice பயனர்கள் மொபைல்கள் மற்றும் லேப்டாப்களைக் கண்டறிந்து ஒப்பிட உதவுகிறது."
+
+#: .\templates\products\account.html:449
+msgid "Can I compare products?"
+msgstr "நான் தயாரிப்புகளை ஒப்பிட முடியுமா?"
+
+#: .\templates\products\account.html:452
+msgid "Yes. You can select products and compare their specifications."
+msgstr "ஆம். நீங்கள் தயாரிப்புகளைத் தேர்ந்தெடுத்து அவற்றின் விவரக்குறிப்புகளை ஒப்பிடலாம்."
+
+#: .\templates\products\account.html:460
+msgid "What is AI Recommendation?"
+msgstr "AI பரிந்துரை என்றால் என்ன?"
+
+#: .\templates\products\account.html:463
+msgid "It recommends suitable products based on the user's requirements."
+msgstr "பயனரின் தேவைகளின் அடிப்படையில் பொருத்தமான தயாரிப்புகளை இது பரிந்துரைக்கிறது."
+
+#: .\templates\products\account.html:471
+msgid "Can I filter products?"
+msgstr "நான் தயாரிப்புகளை வடிகட்ட முடியுமா?"
+
+#: .\templates\products\account.html:474
+msgid ""
+"Yes. Products can be filtered using available specifications such as brand, "
+"price and RAM."
+msgstr ""
+"ஆம். பிராண்ட், விலை மற்றும் RAM போன்ற கிடைக்கும் விவரக்குறிப்புகளைப் பயன்படுத்தி "
+"தயாரிப்புகளை வடிகட்டலாம்."
+
+#: .\templates\products\cart.html:23
+msgid "Your selected products"
+msgstr "நீங்கள் தேர்ந்தெடுத்த தயாரிப்புகள்"
+
+#: .\templates\products\cart.html:116
+msgid "Remove"
+msgstr "நீக்கவும்"
+
+#: .\templates\products\cart.html:132 .\templates\products\checkout.html:90
+#: .\templates\products\checkout.html:288
+#: .\templates\products\order_detail.html:166
+msgid "Total"
+msgstr "மொத்தம்"
+
+#: .\templates\products\cart.html:148
+msgid "Proceed to Buy"
+msgstr "வாங்குவதற்கு தொடரவும்"
+
+#: .\templates\products\cart.html:163 .\templates\products\checkout.html:418
+msgid "Your Cart is Empty"
+msgstr "உங்கள் கார்ட் காலியாக உள்ளது"
+
+#: .\templates\products\cart.html:167
+msgid "Add some products to your cart and they will appear here."
+msgstr "உங்கள் கார்ட்டில் சில தயாரிப்புகளைச் சேர்க்கவும். அவை இங்கே தோன்றும்."
+
+#: .\templates\products\checkout.html:5
+msgid "Checkout"
+msgstr "செக்அவுட்"
+
+#: .\templates\products\checkout.html:19
+msgid "CHECKOUT"
+msgstr ""
+
+#: .\templates\products\checkout.html:23
+msgid "Review your order before placing it."
+msgstr "ஆர்டரைச் செய்வதற்கு முன் உங்கள் ஆர்டரைச் சரிபார்க்கவும்."
+
+#: .\templates\products\checkout.html:73 .\templates\products\checkout.html:269
+#: .\templates\products\order_detail.html:143
+msgid "Quantity"
+msgstr "அளவு"
+
+#: .\templates\products\checkout.html:120
+#: .\templates\products\checkout.html:306
+msgid "Delivery Details"
+msgstr "டெலிவரி விவரங்கள்"
+
+#: .\templates\products\checkout.html:127
+#: .\templates\products\checkout.html:313 .\templates\signup.html:57
+msgid "Full Name"
+msgstr "முழுப் பெயர்"
+
+#: .\templates\products\checkout.html:133
+#: .\templates\products\checkout.html:319 .\templates\signup.html:66
+msgid "Enter your full name"
+msgstr "உங்கள் முழுப் பெயரை உள்ளிடவும்"
+
+#: .\templates\products\checkout.html:139
+#: .\templates\products\checkout.html:325
+msgid "Phone Number"
+msgstr "தொலைபேசி எண்"
+
+#: .\templates\products\checkout.html:145
+#: .\templates\products\checkout.html:331
+msgid "Enter your phone number"
+msgstr "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்"
+
+#: .\templates\products\checkout.html:151
+#: .\templates\products\checkout.html:337
+#: .\templates\products\order_detail.html:71
+msgid "Address"
+msgstr "முகவரி"
+
+#: .\templates\products\checkout.html:156
+#: .\templates\products\checkout.html:342
+msgid "Enter your delivery address"
+msgstr "உங்கள் டெலிவரி முகவரியை உள்ளிடவும்"
+
+#: .\templates\products\checkout.html:162
+#: .\templates\products\checkout.html:348
+#: .\templates\products\order_detail.html:77
+msgid "City"
+msgstr "நகரம்"
+
+#: .\templates\products\checkout.html:168
+#: .\templates\products\checkout.html:354
+msgid "Enter your city"
+msgstr "உங்கள் நகரத்தை உள்ளிடவும்"
+
+#: .\templates\products\checkout.html:174
+#: .\templates\products\checkout.html:360
+#: .\templates\products\order_detail.html:83
+msgid "Pincode"
+msgstr "பின்கோடு"
+
+#: .\templates\products\checkout.html:180
+#: .\templates\products\checkout.html:366
+msgid "Enter your pincode"
+msgstr "உங்கள் பின்கோடை உள்ளிடவும்"
+
+#: .\templates\products\checkout.html:192
+#: .\templates\products\checkout.html:378
+#: .\templates\products\order_detail.html:89
+msgid "Payment Method"
+msgstr "பணம் செலுத்தும் முறை"
+
+#: .\templates\products\checkout.html:201
+#: .\templates\products\checkout.html:387
+msgid "Cash on Delivery"
+msgstr "டெலிவரி நேரத்தில் பணம் செலுத்துதல்"
+
+#: .\templates\products\checkout.html:205
+#: .\templates\products\checkout.html:391
+msgid "Online Payment"
+msgstr "ஆன்லைன் பணம் செலுத்துதல்"
+
+#: .\templates\products\checkout.html:217
+#: .\templates\products\checkout.html:403
+msgid "Place Order"
+msgstr "ஆர்டர் செய்யவும்"
+
+#: .\templates\products\compare.html:11
+msgid "SMART COMPARISON"
+msgstr "ஸ்மார்ட் ஒப்பீடு"
+
+#: .\templates\products\compare.html:14
+#: .\templates\products\compare_menu.html:34
+#: .\templates\products\product_list.html:241
+msgid "Compare Products"
+msgstr "தயாரிப்புகளை ஒப்பிடுக"
+
+#: .\templates\products\compare.html:17
+msgid "Compare specifications and choose the right product for you."
+msgstr "விவரக்குறிப்புகளை ஒப்பிட்டு, உங்களுக்கு ஏற்ற சரியான தயாரிப்பைத் தேர்ந்தெடுக்கவும்."
+
+#: .\templates\products\compare.html:34
+msgid "Specifications"
+msgstr "விவரக்குறிப்புகள்"
+
+#: .\templates\products\compare.html:45
+msgid "BEST CHOICE"
+msgstr "சிறந்த தேர்வு"
+
+#: .\templates\products\compare.html:85 .\templates\products\compare.html:258
+#: .\templates\products\order_detail.html:147
+msgid "Price"
+msgstr "விலை"
+
+#: .\templates\products\compare.html:111 .\templates\products\compare.html:260
+#: .\templates\products\product_list.html:164
+#: .\templates\products\store_compare.html:105
+msgid "Rating"
+msgstr "மதிப்பீடு"
+
+#: .\templates\products\compare.html:136
+#: .\templates\products\product_detail.html:77
+msgid "Processor"
+msgstr "பிராசஸர்"
+
+#: .\templates\products\compare.html:151 .\templates\products\compare.html:263
+#: .\templates\products\product_detail.html:67
+#: .\templates\products\recommend.html:175
+msgid "RAM"
+msgstr "RAM"
+
+#: .\templates\products\compare.html:184 .\templates\products\compare.html:267
+#: .\templates\products\product_detail.html:72
+#: .\templates\products\recommend.html:178
+msgid "Storage"
+msgstr "சேமிப்பு"
+
+#: .\templates\products\compare.html:217
+#: .\templates\products\product_list.html:54
+msgid "Category"
+msgstr "வகை"
+
+#: .\templates\products\compare.html:245
+#: .\templates\products\store_compare.html:88
+msgid "Best Choice"
+msgstr "சிறந்த தேர்வு"
+
+#: .\templates\products\compare.html:253
+msgid ""
+"This product is recommended as the best overall choice based on its price, "
+"rating and available specifications."
+msgstr ""
+"விலை, மதிப்பீடு மற்றும் கிடைக்கும் விவரக்குறிப்புகளின் அடிப்படையில் இந்த தயாரிப்பு "
+"ஒட்டுமொத்தமாக சிறந்த தேர்வாகப் பரிந்துரைக்கப்படுகிறது."
+
+#: .\templates\products\compare.html:304
+#: .\templates\products\product_detail.html:172
+msgid "Back to Products"
+msgstr "தயாரிப்புகளுக்குத் திரும்பவும்"
+
+#: .\templates\products\compare.html:319
+msgid "No Products Selected"
+msgstr "தயாரிப்புகள் எதுவும் தேர்ந்தெடுக்கப்படவில்லை"
+
+#: .\templates\products\compare.html:322
+msgid "Select two or three products to compare them."
+msgstr "இரண்டு அல்லது மூன்று தயாரிப்புகளைத் தேர்ந்தெடுத்து அவற்றை ஒப்பிடுங்கள்."
+
+#: .\templates\products\compare.html:329
+msgid "Browse Products"
+msgstr "தயாரிப்புகளைப் பார்க்கவும்"
+
+#: .\templates\products\compare_menu.html:24
+msgid "Product vs Product"
+msgstr "தயாரிப்பு vs தயாரிப்பு"
+
+#: .\templates\products\compare_menu.html:27
+msgid "Compare two different products side by side."
+msgstr "இரண்டு வெவ்வேறு தயாரிப்புகளை அருகருகே ஒப்பிடுங்கள்."
+
+#: .\templates\products\compare_menu.html:48
+#: .\templates\products\store_compare.html:13
+#: .\templates\products\store_compare_select.html:5
+#: .\templates\products\store_compare_select.html:13
+msgid "Store vs Store"
+msgstr "ஸ்டோர் vs ஸ்டோர்"
+
+#: .\templates\products\compare_menu.html:51
+msgid "Compare the same product between Amazon and Flipkart."
+msgstr "Amazon மற்றும் Flipkart-ல் உள்ள ஒரே தயாரிப்பை ஒப்பிடுங்கள்."
+
+#: .\templates\products\compare_menu.html:58
+#: .\templates\products\store_compare_select.html:73
+msgid "Compare Stores"
+msgstr "ஸ்டோர்களை ஒப்பிடுக"
+
+#: .\templates\products\edit_profile.html:16
+msgid "Update your account details"
+msgstr "உங்கள் கணக்கு விவரங்களைப் புதுப்பிக்கவும்"
+
+#: .\templates\products\edit_profile.html:65
+msgid "Save Changes"
+msgstr "மாற்றங்களைச் சேமிக்கவும்"
+
+#: .\templates\products\edit_profile.html:72
+msgid "Cancel"
+msgstr "ரத்துசெய்யவும்"
+
+#: .\templates\products\my_orders.html:17
+msgid "View your Smart Choice order history"
+msgstr "உங்கள் Smart Choice ஆர்டர் வரலாற்றைப் பார்க்கவும்"
+
+#: .\templates\products\my_orders.html:33
+#: .\templates\products\order_detail.html:19
+#: .\venv\Lib\site-packages\django\forms\formsets.py:484
+#: .\venv\Lib\site-packages\django\forms\formsets.py:491
+msgid "Order"
+msgstr "ஆர்டர்"
+
+#: .\templates\products\my_orders.html:52
+#: .\templates\products\order_detail.html:53
+msgid "Total Amount"
+msgstr "மொத்தத் தொகை"
+
+#: .\templates\products\my_orders.html:61
+msgid "Items"
+msgstr "பொருட்கள்"
+
+#: .\templates\products\my_orders.html:95
+msgid "No Orders Yet"
+msgstr "இதுவரை ஆர்டர்கள் எதுவும் இல்லை"
+
+#: .\templates\products\my_orders.html:99
+msgid "Your placed orders will appear here."
+msgstr "நீங்கள் செய்த ஆர்டர்கள் இங்கே தோன்றும்."
+
+#: .\templates\products\order_detail.html:5
+#: .\templates\products\order_detail.html:23
+msgid "Order Details"
+msgstr "ஆர்டர் விவரங்கள்"
+
+#: .\templates\products\order_detail.html:36
+msgid "Order Information"
+msgstr "ஆர்டர் தகவல்"
+
+#: .\templates\products\order_detail.html:41
+msgid "Order Date"
+msgstr "ஆர்டர் தேதி"
+
+#: .\templates\products\order_detail.html:47
+msgid "Status"
+msgstr "நிலை"
+
+#: .\templates\products\order_detail.html:59
+msgid "Name"
+msgstr "பெயர்"
+
+#: .\templates\products\order_detail.html:65
+msgid "Phone"
+msgstr "தொலைபேசி"
+
+#: .\templates\products\order_detail.html:101
+msgid "Ordered Products"
+msgstr "ஆர்டர் செய்யப்பட்ட தயாரிப்புகள்"
+
+#: .\templates\products\order_detail.html:188
+msgid "Are you sure you want to cancel this order?"
+msgstr "இந்த ஆர்டரை ரத்துசெய்ய விரும்புகிறீர்களா?"
+
+#: .\templates\products\order_detail.html:191
+msgid "Cancel Order"
+msgstr "ஆர்டரை ரத்துசெய்யவும்"
+
+#: .\templates\products\order_detail.html:207
+msgid "Back to My Orders"
+msgstr "எனது ஆர்டர்களுக்குத் திரும்பவும்"
+
+#: .\templates\products\order_success.html:5
+msgid "Order Successful"
+msgstr "ஆர்டர் வெற்றி"
+
+#: .\templates\products\order_success.html:19
+msgid "Order Placed Successfully!"
+msgstr "ஆர்டர் வெற்றிகரமாக செய்யப்பட்டது!"
+
+#: .\templates\products\order_success.html:23
+msgid "Thank you for shopping with Smart Choice."
+msgstr "Smart Choice-ல் ஷாப்பிங் செய்ததற்கு நன்றி."
+
+#: .\templates\products\order_success.html:27
+msgid "Your order has been received successfully."
+msgstr "உங்கள் ஆர்டர் வெற்றிகரமாகப் பெறப்பட்டது."
+
+#: .\templates\products\order_success.html:34
+msgid "Continue Shopping"
+msgstr "ஷாப்பிங்கைத் தொடரவும்"
+
+#: .\templates\products\product_detail.html:82
+msgid "Battery"
+msgstr "பேட்டரி"
+
+#: .\templates\products\product_detail.html:87
+msgid "Display"
+msgstr "டிஸ்ப்ளே"
+
+#: .\templates\products\product_detail.html:92
+msgid "GPU"
+msgstr "கிராபிக்ஸ் செயலி (GPU)"
+
+#: .\templates\products\product_detail.html:97
+msgid "Camera"
+msgstr "கேமரா"
+
+#: .\templates\products\product_detail.html:102
+msgid "Usage"
+msgstr "பயன்பாடு"
+
+#: .\templates\products\product_detail.html:128
+msgid "Buy Now"
+msgstr "இப்போது வாங்கவும்"
+
+#: .\templates\products\product_detail.html:140
+#, fuzzy
+#| msgid "Buy on"
+msgid "Buy on Amazon"
+msgstr "அமேசானில் வாங்கவும்"
+
+#: .\templates\products\product_detail.html:152
+msgid "Buy on Flipkart"
+msgstr "ஃப்ளிப்கார்ட்டில் வாங்கவும்"
+
+#: .\templates\products\product_detail.html:161
+#: .\templates\products\product_list.html:337
+msgid "Add to Cart"
+msgstr "கார்ட்டில் சேர்க்கவும்"
+
+#: .\templates\products\product_list.html:5
+msgid "Products"
+msgstr "தயாரிப்புகள்"
+
+#: .\templates\products\product_list.html:21
+msgid "Find Your Perfect Device"
+msgstr "உங்களுக்கான சரியான சாதனத்தைக் கண்டறியுங்கள்"
+
+#: .\templates\products\product_list.html:25
+msgid "Search and filter mobiles and laptops based on your needs."
+msgstr "உங்கள் தேவைகளுக்கு ஏற்ப மொபைல்கள் மற்றும் லேப்டாப்களைத் தேடி வடிகட்டுங்கள்."
+
+#: .\templates\products\product_list.html:40
+#: .\templates\products\store_compare_select.html:36
+msgid "Search"
+msgstr "தேடல்"
+
+#: .\templates\products\product_list.html:47
+msgid "Search mobile, laptop, brand..."
+msgstr "மொபைல், லேப்டாப், பிராண்டைத் தேடுங்கள்..."
+
+#: .\templates\products\product_list.html:62
+msgid "All"
+msgstr "அனைத்தும்"
+
+#: .\templates\products\product_list.html:85
+msgid "Brand"
+msgstr "பிராண்ட்"
+
+#: .\templates\products\product_list.html:98
+#: .\templates\products\product_list.html:115
+msgid "All Brands"
+msgstr "அனைத்து பிராண்டுகளும்"
+
+#: .\templates\products\product_list.html:150
+msgid "Max Price"
+msgstr "அதிகபட்ச விலை"
+
+#: .\templates\products\product_list.html:172
+msgid "Any Rating"
+msgstr "எந்த மதிப்பீடும்"
+
+#: .\templates\products\product_list.html:200
+msgid "Apply Filters"
+msgstr "வடிகட்டிகளைப் பயன்படுத்தவும்"
+
+#: .\templates\products\product_list.html:207
+#: .\venv\Lib\site-packages\django\forms\widgets.py:573
+msgid "Clear"
+msgstr "அழிக்கவும்"
+
+#: .\templates\products\product_list.html:223
+msgid "Products Found"
+msgstr "கண்டறியப்பட்ட தயாரிப்புகள்"
+
+#: .\templates\products\product_list.html:244
+msgid "Select up to 3 products and compare them."
+msgstr "அதிகபட்சம் 3 தயாரிப்புகளைத் தேர்ந்தெடுத்து ஒப்பிடுங்கள்."
+
+#: .\templates\products\product_list.html:252
+msgid "Compare Selected"
+msgstr "தேர்ந்தெடுத்தவற்றை ஒப்பிடுக"
+
+#: .\templates\products\product_list.html:372
+msgid "No products found"
+msgstr "தயாரிப்புகள் எதுவும் கிடைக்கவில்லை"
+
+#: .\templates\products\product_list.html:376
+msgid "Try changing your search or filter options."
+msgstr "உங்கள் தேடல் அல்லது வடிகட்டி விருப்பங்களை மாற்றிப் பாருங்கள்."
+
+#: .\templates\products\product_list.html:383
+msgid "Clear Filters"
+msgstr "வடிகட்டிகளை அழிக்கவும்"
+
+#: .\templates\products\recommend.html:19
+msgid "Smart Recommendation"
+msgstr "ஸ்மார்ட் பரிந்துரை"
+
+#: .\templates\products\recommend.html:23
+msgid "Tell Us What You Need"
+msgstr "உங்களுக்கு என்ன தேவை என்று சொல்லுங்கள்"
+
+#: .\templates\products\recommend.html:27
+msgid ""
+"Describe your budget and purpose. We'll find suitable products from our "
+"database."
+msgstr ""
+"உங்கள் பட்ஜெட் மற்றும் பயன்பாட்டைத் தெரிவியுங்கள். எங்கள் தரவுத்தளத்திலிருந்து பொருத்தமான "
+"தயாரிப்புகளைக் கண்டறிந்து தருகிறோம்."
+
+#: .\templates\products\recommend.html:42
+msgid "What are you looking for?"
+msgstr "நீங்கள் எதைத் தேடுகிறீர்கள்?"
+
+#: .\templates\products\recommend.html:49
+msgid "Example: I need a laptop below 60000 for development with 16GB RAM..."
+msgstr ""
+"உதாரணம்: 16GB RAM உடன் Development பயன்பாட்டிற்கு ₹60000-க்குக் கீழ் ஒரு லேப்டாப் "
+"தேவை..."
+
+#: .\templates\products\recommend.html:57
+msgid "Find My Best Product"
+msgstr "எனக்கான சிறந்த தயாரிப்பைக் கண்டறியவும்"
+
+#: .\templates\products\recommend.html:71
+msgid "Smart Choice AI"
+msgstr "Smart Choice AI"
+
+#: .\templates\products\recommend.html:96
+msgid "Why We Recommend This"
+msgstr "இதை ஏன் பரிந்துரைக்கிறோம்"
+
+#: .\templates\products\recommend.html:115
+msgid "Recommended Products"
+msgstr "பரிந்துரைக்கப்பட்ட தயாரிப்புகள்"
+
+#: .\templates\products\recommend.html:119
+msgid "Based on your requirements:"
+msgstr "உங்கள் தேவைகளின் அடிப்படையில்:"
+
+#: .\templates\products\recommend.html:196
+msgid "View Product"
+msgstr "தயாரிப்பைப் பார்க்கவும்"
+
+#: .\templates\products\store_compare.html:5
+msgid "Store Comparison"
+msgstr "ஸ்டோர் ஒப்பீடு"
+
+#: .\templates\products\store_compare.html:21
+msgid "Compare Amazon and Flipkart prices"
+msgstr "Amazon மற்றும் Flipkart விலைகளை ஒப்பிடுங்கள்"
+
+#: .\templates\products\store_compare.html:34
+msgid "BEST DEAL"
+msgstr "சிறந்த சலுகை"
+
+#: .\templates\products\store_compare.html:60
+#: .\templates\products\store_compare.html:119
+msgid "Buy on"
+msgstr "இதில் வாங்கவும்"
+
+#: .\templates\products\store_compare.html:69
+msgid "No store offers available for this product."
+msgstr "இந்த தயாரிப்பிற்கு எந்த ஸ்டோர் சலுகைகளும் கிடைக்கவில்லை."
+
+#: .\templates\products\store_compare.html:79
+#: .\templates\products\store_compare.html:100
+msgid "You Save"
+msgstr "உங்கள் சேமிப்பு"
+
+#: .\templates\products\store_compare.html:95
+msgid "Best Price"
+msgstr "சிறந்த விலை"
+
+#: .\templates\products\store_compare.html:109
+msgid "Delivery"
+msgstr "டெலிவரி"
+
+#: .\templates\products\store_compare_select.html:17
+msgid "Select a product to compare Amazon and Flipkart prices."
+msgstr "Amazon மற்றும் Flipkart விலைகளை ஒப்பிட ஒரு தயாரிப்பைத் தேர்ந்தெடுக்கவும்."
+
+#: .\templates\products\store_compare_select.html:32
+msgid "Search product or brand..."
+msgstr "தயாரிப்பு அல்லது பிராண்டைத் தேடுங்கள்..."
+
+#: .\templates\products\store_compare_select.html:84
+msgid "No products available."
+msgstr "தயாரிப்புகள் எதுவும் கிடைக்கவில்லை."
+
+#: .\templates\signup.html:11
+msgid "Sign Up"
+msgstr "பதிவு செய்யவும்"
+
+#: .\templates\signup.html:34
+msgid "Sign up to"
+msgstr "பதிவு செய்யவும்"
+
+#: .\templates\signup.html:38
+msgid "Create your account to get started"
+msgstr "தொடங்க உங்கள் கணக்கை உருவாக்கவும்"
+
+#: .\templates\signup.html:86
+msgid "Choose a username"
+msgstr "ஒரு பயனர்பெயரைத் தேர்ந்தெடுக்கவும்"
+
+#: .\templates\signup.html:107
+msgid "Enter your email address"
+msgstr "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்"
+
+#: .\templates\signup.html:129
+msgid "Create a password"
+msgstr "கடவுச்சொல்லை உருவாக்கவும்"
+
+#: .\templates\signup.html:137 .\templates\signup.html:168
+msgid "Show password"
+msgstr "கடவுச்சொல்லைக் காட்டவும்"
+
+#: .\templates\signup.html:150
+msgid "Confirm Password"
+msgstr "கடவுச்சொல்லை உறுதிப்படுத்தவும்"
+
+#: .\templates\signup.html:160
+msgid "Confirm your password"
+msgstr "உங்கள் கடவுச்சொல்லை உறுதிப்படுத்தவும்"
+
+#: .\templates\signup.html:189
+msgid "I agree to the"
+msgstr "நான் இதற்கு ஒப்புக்கொள்கிறேன்"
+
+#: .\templates\signup.html:191
+#: .\venv\Lib\site-packages\django\db\models\base.py:1666
+#: .\venv\Lib\site-packages\django\forms\models.py:933
+msgid "and"
+msgstr "மற்றும்"
+
+#: .\templates\signup.html:218
+msgid "Already have an account?"
+msgstr "ஏற்கனவே கணக்கு உள்ளதா?"
+
+#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
+msgid "Messages"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
+#, fuzzy
+#| msgid "Specifications"
+msgid "Syndication"
+msgstr "விவரக்குறிப்புகள்"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\venv\Lib\site-packages\django\core\paginator.py:33
+msgid "…"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:35
+msgid "That page number is not an integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:36
+msgid "That page number is less than 1"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:37
+msgid "That page contains no results"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:70
+msgid "Enter a valid domain name."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:153
+#: .\venv\Lib\site-packages\django\forms\fields.py:775
+msgid "Enter a valid URL."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:200
+msgid "Enter a valid integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:211
+#, fuzzy
+#| msgid "Enter your email address"
+msgid "Enter a valid email address."
+msgstr "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்"
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\venv\Lib\site-packages\django\core\validators.py:289
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:297
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:309
+#: .\venv\Lib\site-packages\django\core\validators.py:318
+#: .\venv\Lib\site-packages\django\core\validators.py:332
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2299
+#, fuzzy, python-format
+#| msgid "Enter your email address"
+msgid "Enter a valid %(protocol)s address."
+msgstr "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்"
+
+#: .\venv\Lib\site-packages\django\core\validators.py:311
+msgid "IPv4"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:320
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:43
+msgid "IPv6"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:334
+msgid "IPv4 or IPv6"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:375
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:381
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:416
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:425
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:434
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:441
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:473
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:491
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:514
+#: .\venv\Lib\site-packages\django\forms\fields.py:366
+#: .\venv\Lib\site-packages\django\forms\fields.py:405
+#, fuzzy
+#| msgid "Enter your phone number"
+msgid "Enter a number."
+msgstr "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்"
+
+#: .\venv\Lib\site-packages\django\core\validators.py:516
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:521
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:526
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:597
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:659
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1668
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:94
+msgid "- Select an option -"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:143
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:144
+msgid "This field cannot be null."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:145
+msgid "This field cannot be blank."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:146
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:150
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:187
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1203
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1204
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1206
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1256
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1258
+msgid "String (unlimited)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1367
+msgid "Comma-separated integers"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1468
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1472
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1607
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1476
+msgid "Date (without time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1603
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1611
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1616
+msgid "Date (with time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1743
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1745
+msgid "Decimal number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1947
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1951
+msgid "Duration"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1999
+#, fuzzy
+#| msgid "Enter your email address"
+msgid "Email address"
+msgstr "உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்"
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2024
+msgid "File path"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2102
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2104
+msgid "Floating point number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2144
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2146
+msgid "Integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2242
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2259
+msgid "Small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2267
+#, fuzzy
+#| msgid "Address"
+msgid "IPv4 address"
+msgstr "முகவரி"
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2298
+#, fuzzy
+#| msgid "Address"
+msgid "IP address"
+msgstr "முகவரி"
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2389
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2390
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2392
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2443
+msgid "Positive big integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2458
+msgid "Positive integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2473
+msgid "Positive small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2489
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2525
+msgid "Text"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2605
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2609
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2613
+msgid "Time"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2721
+msgid "URL"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2745
+msgid "Raw binary data"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2748
+#, python-format
+msgid "“%(value)s” is not a valid binary value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2821
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2823
+msgid "Universally unique identifier"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:247
+msgid "File"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:423
+msgid "Image"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
+msgid "A JSON object"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\json.py:28
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:983
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:986
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1361
+msgid "One-to-one relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1418
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1420
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1468
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to
+#. the label
+#: .\venv\Lib\site-packages\django\forms\boundfield.py:188
+msgid ":?.!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:93
+msgid "This field is required."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:315
+#, fuzzy
+#| msgid "Enter your phone number"
+msgid "Enter a whole number."
+msgstr "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்"
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:486
+#: .\venv\Lib\site-packages\django\forms\fields.py:1246
+msgid "Enter a valid date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:509
+#: .\venv\Lib\site-packages\django\forms\fields.py:1247
+msgid "Enter a valid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:536
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:570
+msgid "Enter a valid duration."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:571
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:640
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:641
+msgid "No file was submitted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:642
+msgid "The submitted file is empty."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:644
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:649
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:717
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:864
+#: .\venv\Lib\site-packages\django\forms\fields.py:951
+#: .\venv\Lib\site-packages\django\forms\models.py:1624
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:953
+#: .\venv\Lib\site-packages\django\forms\fields.py:1073
+#: .\venv\Lib\site-packages\django\forms\models.py:1622
+msgid "Enter a list of values."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1074
+msgid "Enter a complete value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1318
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1348
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: .\venv\Lib\site-packages\django\forms\forms.py:97
+msgid ":"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\forms.py:239
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:926
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:931
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:938
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:947
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1384
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1475
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1626
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\utils.py:229
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:574
+msgid "Currently"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:575
+#, fuzzy
+#| msgid "Save Changes"
+msgid "Change"
+msgstr "மாற்றங்களைச் சேமிக்கவும்"
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:914
+msgid "Unknown"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:915
+msgid "Yes"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:916
+msgid "No"
+msgstr ""
+
+#. Translators: %s is the name of a model, e.g. "No City matches the
+#. given query."
+#: .\venv\Lib\site-packages\django\shortcuts.py:105
+#: .\venv\Lib\site-packages\django\shortcuts.py:125
+#: .\venv\Lib\site-packages\django\shortcuts.py:149
+#: .\venv\Lib\site-packages\django\shortcuts.py:168
+#, python-format
+msgid "No %s matches the given query."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\tasks\base.py:35
+msgctxt "Task"
+msgid "Ready"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\tasks\base.py:37
+msgctxt "Task"
+msgid "Running"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\tasks\base.py:39
+msgctxt "Task"
+msgid "Failed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\tasks\base.py:41
+#, fuzzy
+#| msgid "Order Successful"
+msgctxt "Task"
+msgid "Successful"
+msgstr "ஆர்டர் வெற்றி"
+
+#. Translators: Please do not add spaces around commas.
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:879
+msgid "yes,no,maybe"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:909
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:926
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:928
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:930
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:932
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:934
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:936
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:74
+msgid "p.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:75
+msgid "a.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:80
+msgid "PM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:81
+#, fuzzy
+#| msgid "RAM"
+msgid "AM"
+msgstr "ரேம்"
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:153
+msgid "midnight"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:155
+msgid "noon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:21
+#, fuzzy
+#| msgid "Status"
+msgid "Sat"
+msgstr "நிலை"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:25
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:26
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:27
+#, fuzzy
+#| msgid "Search"
+msgid "March"
+msgstr "தேடல்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:28
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:29
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:30
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:31
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:32
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:33
+#, fuzzy
+#| msgid "Remember me"
+msgid "September"
+msgstr "என்னை நினைவில் வைத்துக்கொள்ளவும்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:34
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:35
+#, fuzzy
+#| msgid "Phone Number"
+msgid "November"
+msgstr "தொலைபேசி எண்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:36
+#, fuzzy
+#| msgid "Remember me"
+msgid "December"
+msgstr "என்னை நினைவில் வைத்துக்கொள்ளவும்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:39
+#, fuzzy
+#| msgid "and"
+msgid "jan"
+msgstr "மற்றும்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:40
+msgid "feb"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:41
+#, fuzzy
+#| msgid "Compare"
+msgid "mar"
+msgstr "ஒப்பிடுக"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:42
+msgid "apr"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:43
+msgid "may"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:44
+msgid "jun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:45
+msgid "jul"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:46
+msgid "aug"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:47
+msgid "sep"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:48
+msgid "oct"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:49
+msgid "nov"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:50
+msgid "dec"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:55
+#, fuzzy
+#| msgid "Search"
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "தேடல்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:69
+#, fuzzy
+#| msgid "Search"
+msgctxt "alt. month"
+msgid "March"
+msgstr "தேடல்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:75
+#, fuzzy
+#| msgid "Remember me"
+msgctxt "alt. month"
+msgid "September"
+msgstr "என்னை நினைவில் வைத்துக்கொள்ளவும்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:77
+#, fuzzy
+#| msgid "Phone Number"
+msgctxt "alt. month"
+msgid "November"
+msgstr "தொலைபேசி எண்"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:78
+#, fuzzy
+#| msgid "Remember me"
+msgctxt "alt. month"
+msgid "December"
+msgstr "என்னை நினைவில் வைத்துக்கொள்ளவும்"
+
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:20
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: .\venv\Lib\site-packages\django\utils\text.py:301
+#: .\venv\Lib\site-packages\django\utils\timesince.py:135
+msgid ", "
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:30
+msgid "Forbidden"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:31
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:35
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:41
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:46
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:55
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:61
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:67
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:64
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:115
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:353
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:384
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:680
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:720
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:173
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:68
+#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:9
+#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:12
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "%(directory)s-ன் குறியீடு"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:197
+msgid "The install worked successfully! Congratulations!"
+msgstr "நிறுவல் வெற்றிகரமாக முடிந்தது! வாழ்த்துகள்!"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:199
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+"Django %(version)s-க்கான <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/releases/\" target=\"_blank\" rel=\"noopener\">வெளியீட்டு "
+"குறிப்புகளைப்</a> பார்க்கவும்."
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:201
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+"உங்கள் settings கோப்பில் <a href=\"https://docs.djangoproject.com/en/%(version)s/"
+"ref/settings/#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> "
+"இருப்பதாலும், எந்த URL-களும் அமைக்கப்படாததாலும் இந்தப் பக்கம் காட்டப்படுகிறது."
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:220
+msgid "Django Documentation"
+msgstr "Django ஆவணங்கள்"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
+msgid "Topics, references, &amp; how-to’s"
+msgstr "தலைப்புகள், குறிப்புகள் மற்றும் வழிகாட்டுதல்கள்"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:229
+msgid "Tutorial: A Polling App"
+msgstr "பயிற்சி: Polling App"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
+msgid "Get started with Django"
+msgstr "Django-வைத் தொடங்குங்கள்"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:238
+msgid "Django Community"
+msgstr "Django சமூகம்"
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
+msgid "Connect, get help, or contribute"
+msgstr "இணையுங்கள், உதவி பெறுங்கள் அல்லது பங்களியுங்கள்"

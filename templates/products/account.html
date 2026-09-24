@@ -1,0 +1,462 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Account" %} - Smart Choice
+{% endblock %}
+
+{% block content %}
+
+<div class="account-page sc-account-overview">
+
+    <div class="account-header">
+
+        <h1>👤 {% trans "Account" %}</h1>
+
+        {% if user.is_authenticated %}
+
+            <p>
+                {% trans "Welcome," %} <strong>{{ user.username }}</strong>
+            </p>
+
+        {% else %}
+
+            <p>
+                {% trans "Login to access your Smart Choice account" %}
+            </p>
+
+            <a href="{% url 'login' %}" class="account-login-btn">
+                {% trans "Login" %}
+            </a>
+
+        {% endif %}
+
+    </div>
+
+
+    {% if user.is_authenticated %}
+
+    <!-- PROFILE DETAILS -->
+
+    <div class="account-section">
+
+        <h2>{% trans "Profile Details" %}</h2>
+
+        <div class="account-item">
+            <span>{% trans "Username" %}</span>
+            <strong>{{ user.username }}</strong>
+        </div>
+
+        <div class="account-item">
+            <span>{% trans "Email" %}</span>
+            <strong>
+                {% if user.email %}
+                    {{ user.email }}
+                {% else %}
+                    {% trans "Not added" %}
+                {% endif %}
+            </strong>
+        </div>
+
+        <div class="account-item">
+            <span>{% trans "Account Status" %}</span>
+            <strong>{% trans "Active" %}</strong>
+        </div>
+
+        <a
+            href="{% url 'edit_profile' %}"
+            class="account-edit-btn"
+        >
+            {% trans "Edit Profile" %}
+        </a>
+
+    </div>
+
+
+    <!-- ORDER SECTION -->
+
+    <div class="account-section">
+
+        <h2>🛍️ {% trans "My Shopping" %}</h2>
+
+        <div class="account-item">
+
+            <span>{% trans "My Orders" %}</span>
+
+            <a href="{% url 'my_orders' %}">
+                {% trans "View" %} ›
+            </a>
+
+        </div>
+
+        <div class="account-item">
+
+            <span>{% trans "My Cart" %}</span>
+
+            <a href="{% url 'cart' %}">
+                {% trans "View" %} ›
+            </a>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- SETTINGS -->
+
+    <div class="account-section">
+
+        <h2>{% trans "Account Settings" %}</h2>
+
+        <button type="button" class="settings-row" onclick="openLanguage()">
+
+            <span class="settings-left">
+
+                <span class="settings-icon">🌐</span>
+
+                <span>{% trans "Select Language" %}</span>
+
+            </span>
+
+            <span>›</span>
+
+        </button>
+
+
+        <button type="button" class="settings-row" onclick="openHelp()">
+
+            <span class="settings-left">
+
+                <span class="settings-icon">❓</span>
+
+                <span>{% trans "Help Center" %}</span>
+
+            </span>
+
+            <span>›</span>
+
+        </button>
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="account-section">
+
+        <h2>Smart Choice</h2>
+
+        <button type="button" class="settings-row" onclick="openTerms()">
+
+            <span class="settings-left">
+
+                <span class="settings-icon">📄</span>
+
+                <span>{% trans "Terms, Policies and Licenses" %}</span>
+
+            </span>
+
+            <span>›</span>
+
+        </button>
+
+
+        <button type="button" class="settings-row" onclick="openFAQ()">
+
+            <span class="settings-left">
+
+                <span class="settings-icon">❓</span>
+
+                <span>{% trans "Browse FAQs" %}</span>
+
+            </span>
+
+            <span>›</span>
+
+        </button>
+
+    </div>
+
+
+
+</div>
+
+
+<!-- LANGUAGE -->
+
+<div id="languageModal" class="account-modal">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('languageModal')">
+            ×
+        </button>
+
+        <h3>🌐 {% trans "Select Language" %}</h3>
+
+        <p>{% trans "Choose your preferred language." %}</p>
+
+        <form action="{% url 'set_language' %}" method="post">
+
+            {% csrf_token %}
+
+            <input
+                type="hidden"
+                name="next"
+                value="{{ request.get_full_path }}"
+            >
+
+            <button
+                type="submit"
+                name="language"
+                value="en"
+                class="language-option">
+                English
+            </button>
+
+            <button
+                type="submit"
+                name="language"
+                value="ta"
+                class="language-option">
+                தமிழ்
+            </button>
+
+            <button
+                type="submit"
+                name="language"
+                value="hi"
+                class="language-option">
+                हिन्दी
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- HELP CENTER -->
+
+<div id="helpModal" class="account-modal">
+
+    <div class="modal-box large-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('helpModal')">
+            ×
+        </button>
+
+        <h3>❓ {% trans "Help Center" %}</h3>
+
+        <p>{% trans "How can we help you?" %}</p>
+
+
+        <div class="help-item">
+
+            <b>
+                {% trans "How do I find a mobile or laptop?" %}
+            </b>
+
+            <span>
+                {% trans "Open Mobiles or Laptops from the sidebar and use the available filters." %}
+            </span>
+
+        </div>
+
+
+        <div class="help-item">
+
+            <b>
+                {% trans "How does AI Recommendation work?" %}
+            </b>
+
+            <span>
+                {% trans "Enter your requirement in AI Recommendation and Smart Choice will suggest a suitable product." %}
+            </span>
+
+        </div>
+
+
+        <div class="help-item">
+
+            <b>
+                {% trans "How can I compare products?" %}
+            </b>
+
+            <span>
+                {% trans "Select products and use the Compare option to compare their specifications." %}
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TERMS, POLICIES AND LICENSES -->
+
+<div id="termsModal" class="account-modal">
+
+    <div class="modal-box large-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('termsModal')">
+            ×
+        </button>
+
+        <h3>
+            📄 {% trans "Terms, Policies and Licenses" %}
+        </h3>
+
+
+        <h4>{% trans "Terms & Conditions" %}</h4>
+
+        <p>
+            {% trans "Smart Choice is an academic web application designed to help users find, compare and select suitable products." %}
+        </p>
+
+
+        <h4>{% trans "Privacy Policy" %}</h4>
+
+        <p>
+            {% trans "User information is used for providing account and application features." %}
+        </p>
+
+
+        <h4>{% trans "Licenses" %}</h4>
+
+        <p>
+            {% trans "Smart Choice uses technologies such as Django, Python, Bootstrap, HTML, CSS and JavaScript." %}
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div id="faqModal" class="account-modal">
+
+    <div class="modal-box large-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('faqModal')">
+            ×
+        </button>
+
+        <h3>
+            ❓ {% trans "Frequently Asked Questions" %}
+        </h3>
+
+
+        <div class="faq-item">
+
+            <b>{% trans "What is Smart Choice?" %}</b>
+
+            <p>
+                {% trans "Smart Choice helps users find and compare mobiles and laptops." %}
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <b>{% trans "Can I compare products?" %}</b>
+
+            <p>
+                {% trans "Yes. You can select products and compare their specifications." %}
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <b>{% trans "What is AI Recommendation?" %}</b>
+
+            <p>
+                {% trans "It recommends suitable products based on the user's requirements." %}
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <b>{% trans "Can I filter products?" %}</b>
+
+            <p>
+                {% trans "Yes. Products can be filtered using available specifications such as brand, price and RAM." %}
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openModal(id) {
+    document.getElementById(id).classList.add("show");
+}
+
+function closeModal(id) {
+    document.getElementById(id).classList.remove("show");
+}
+
+
+/* LANGUAGE */
+
+function openLanguage() {
+    openModal("languageModal");
+}
+
+
+/* HELP */
+
+function openHelp() {
+    openModal("helpModal");
+}
+
+
+/* TERMS */
+
+function openTerms() {
+    openModal("termsModal");
+}
+
+
+/* FAQ */
+
+function openFAQ() {
+    openModal("faqModal");
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+window.addEventListener("click", function(event) {
+
+    if (event.target.classList.contains("account-modal")) {
+        event.target.classList.remove("show");
+    }
+
+});
+
+</script>
+
+{% endblock %}
