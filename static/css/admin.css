@@ -1,0 +1,2020 @@
+/* =========================================
+   SMARTCHOICE ADMIN - PINK THEME
+   ========================================= */
+
+:root {
+    --pink-dark: #c2185b;
+    --pink-main: #d81b72;
+    --pink: #e91e78;
+    --pink-light: #fff0f7;
+    --pink-soft: #ffe4ef;
+    --pink-border: #f7b6d2;
+    --white: #ffffff;
+    --text: #4a3040;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    background: #ffffff !important;
+    color: var(--text) !important;
+    font-family: "Poppins", Arial, sans-serif !important;
+}
+
+
+/* =========================================
+   TOP HEADER
+   ========================================= */
+
+#header {
+    background: linear-gradient(
+        90deg,
+        #8e1748,
+        #c2185b,
+        #e91e78
+    ) !important;
+
+    color: white !important;
+    min-height: 70px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* SmartChoice Logo */
+
+#site-name {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#site-name a {
+    color: white !important;
+    text-decoration: none !important;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+
+/* Tick icon */
+
+.check-icon {
+    width: 42px;
+    height: 42px;
+
+    border: 3px solid white;
+    border-radius: 12px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    margin-right: 7px;
+}
+
+
+/* Logo text */
+
+.smart {
+    color: white;
+}
+
+.choice {
+    color: #ffb6d5;
+}
+
+
+/* Find your fit */
+
+#site-name small {
+    position: absolute;
+
+    margin-top: 42px;
+    margin-left: -120px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #ffe4ef;
+}
+
+
+/* =========================================
+   USER / LOGOUT AREA
+   ========================================= */
+
+#user-tools {
+    color: white !important;
+    font-size: 14px;
+}
+
+#user-tools a {
+    color: white !important;
+}
+
+#user-tools a:hover {
+    color: #ffe4ef !important;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+/* Main sidebar */
+
+#nav-sidebar {
+    background: linear-gradient(
+        180deg,
+        #fff7fb,
+        #ffe4ef
+    ) !important;
+
+    border-right: 1px solid #f3b4ce !important;
+}
+
+
+/* Sidebar links */
+
+#nav-sidebar a {
+    color: #c2185b !important;
+    font-weight: 500;
+
+    border-radius: 10px;
+    margin: 3px 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Hover */
+
+#nav-sidebar a:hover {
+    background: #ffd2e4 !important;
+    color: #8e1748 !important;
+}
+
+
+/* Selected item */
+
+#nav-sidebar .current-app a,
+#nav-sidebar .current-model {
+    background: linear-gradient(
+        90deg,
+        #d81b72,
+        #e91e78
+    ) !important;
+
+    color: white !important;
+}
+
+
+/* App names */
+
+#nav-sidebar .module caption {
+    background: #c2185b !important;
+    color: white !important;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   SIDEBAR SEARCH
+   ========================================= */
+
+#nav-sidebar input[type="search"] {
+    border: 2px solid #f0a8c8 !important;
+    background: white !important;
+
+    border-radius: 8px !important;
+    color: #4a3040 !important;
+}
+
+#nav-sidebar input[type="search"]:focus {
+    border-color: #e91e78 !important;
+    outline: none !important;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+#content {
+    background: white !important;
+}
+
+
+/* Breadcrumb */
+
+div.breadcrumbs {
+    background: linear-gradient(
+        90deg,
+        #c2185b,
+        #e91e78
+    ) !important;
+
+    color: white !important;
+}
+
+div.breadcrumbs a {
+    color: white !important;
+}
+
+
+/* =========================================
+   PAGE HEADINGS
+   ========================================= */
+
+#content h1 {
+    color: #c2185b !important;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   MODULE / CARDS
+   ========================================= */
+
+.module {
+    background: white !important;
+
+    border: 1px solid #f5b5d0 !important;
+    border-radius: 12px !important;
+
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.08) !important;
+
+    overflow: hidden;
+}
+
+
+/* Module headings */
+
+.module h2,
+.module caption {
+    background: linear-gradient(
+        90deg,
+        #fff0f7,
+        #ffe4ef
+    ) !important;
+
+    color: #c2185b !important;
+
+    border-bottom: 1px solid #f5b5d0 !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =========================================
+   RECENT ACTIONS
+   ========================================= */
+
+#content-related {
+    background: transparent !important;
+}
+
+
+/* Recent actions box */
+
+#content-related .module {
+    background: white !important;
+
+    border: 1px solid #f5b5d0 !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 5px 20px rgba(194, 24, 91, 0.10) !important;
+}
+
+
+/* Recent Actions heading */
+
+#content-related h2 {
+    background: linear-gradient(
+        90deg,
+        #fff0f7,
+        #ffe4ef
+    ) !important;
+
+    color: #c2185b !important;
+
+    font-size: 22px !important;
+}
+
+
+/* My actions */
+
+#content-related h3 {
+    background: #fff0f7 !important;
+
+    color: #c2185b !important;
+
+    border-bottom: 1px solid #f7c2d8 !important;
+}
+
+
+/* Action list */
+
+#content-related ul.actionlist {
+    background: white !important;
+
+    color: #6b4a5a !important;
+
+    padding: 15px !important;
+}
+
+
+/* Action list links */
+
+#content-related ul.actionlist a {
+    color: #c2185b !important;
+}
+
+
+/* None available */
+
+#content-related .quiet {
+    color: #765b68 !important;
+}
+
+
+/* =========================================
+   REMOVE BLACK AREAS
+   ========================================= */
+
+/* Django dark blocks / footer */
+
+#content-related *,
+#nav-sidebar *,
+.module *,
+#footer {
+    --dark-bg: #ffffff;
+}
+
+
+/* Prevent black background */
+
+#content-related .module,
+#content-related .module *,
+#content-related ul,
+#content-related li {
+    background-color: transparent;
+}
+
+
+/* Keep main card white */
+
+#content-related .module {
+    background: white !important;
+}
+
+
+/* Remove black footer/empty strip */
+
+#footer {
+    background: white !important;
+    color: #c2185b !important;
+
+    border-top: 1px solid #f7c2d8 !important;
+
+    min-height: 0 !important;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+    background: linear-gradient(
+        90deg,
+        #c2185b,
+        #e91e78
+    ) !important;
+
+    color: white !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-weight: 600 !important;
+}
+
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background: #8e1748 !important;
+}
+
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+#result_list thead th {
+    background: #ffe4ef !important;
+    color: #c2185b !important;
+}
+
+#result_list tbody tr:hover {
+    background: #fff4f9 !important;
+}
+
+
+/* =========================================
+   FORM INPUTS
+   ========================================= */
+
+input,
+textarea,
+select {
+    border: 1px solid #efb1cb !important;
+    border-radius: 7px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #e91e78 !important;
+
+    box-shadow:
+        0 0 0 2px rgba(233, 30, 120, 0.12) !important;
+
+    outline: none !important;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+    color: #c2185b;
+}
+
+a:hover {
+    color: #8e1748;
+}
+
+
+/* =========================================
+   PAGINATION
+   ========================================= */
+
+.paginator a {
+    background: #ffe4ef !important;
+    color: #c2185b !important;
+
+    border-radius: 6px;
+}
+
+.paginator a:hover {
+    background: #e91e78 !important;
+    color: white !important;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+   ========================================= */
+
+.deletelink {
+    background: #c2185b !important;
+    color: white !important;
+
+    border-radius: 7px !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    #header {
+        padding: 0 15px;
+    }
+
+    #site-name a {
+        font-size: 22px;
+    }
+
+    #nav-sidebar {
+        background: #fff0f7 !important;
+    }
+}/* =====================================================
+   SMARTCHOICE ADMIN - FINAL PINK OVERRIDE
+   REMOVE ALL BLACK BACKGROUNDS
+   ===================================================== */
+
+
+/* ---------- MAIN PAGE ---------- */
+
+body,
+#container,
+#main,
+#content,
+#content-main,
+#content-related {
+    background: #ffffff !important;
+}
+
+
+/* =====================================================
+   DARK PINK SECTION HEADINGS
+   Authentication and Authorization
+   Products
+   Recent actions
+   ===================================================== */
+
+.module caption,
+.module h2,
+#content-related h2,
+#nav-sidebar .module caption,
+#nav-sidebar .module h2 {
+
+    background: #c2185b !important;
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+
+/* Make heading text WHITE */
+
+.module caption a,
+.module h2 a,
+#content-related h2 a,
+#nav-sidebar .module caption a,
+#nav-sidebar .module h2 a {
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   MAIN ADMIN TABLE ROWS
+   Groups / Users / Order items / Orders /
+   Product offers / Products
+   ===================================================== */
+
+.module table,
+.module tbody,
+.module tr,
+.module td {
+
+    background: #ffffff !important;
+}
+
+
+/* Remove row background */
+
+.module tbody tr,
+.module tbody tr:nth-child(even),
+.module tbody tr:nth-child(odd) {
+
+    background: transparent !important;
+}
+
+
+/* =====================================================
+   MODEL NAMES - PINK TEXT
+   ===================================================== */
+
+.module table td,
+.module table td a {
+
+    background: transparent !important;
+    color: #c2185b !important;
+
+    border: none !important;
+}
+
+
+/* Product / Group / User / Orders etc */
+
+.module table td a {
+
+    font-weight: 600 !important;
+}
+
+
+/* =====================================================
+   ADD / CHANGE - PINK TEXT ONLY
+   NO BACKGROUND
+   ===================================================== */
+
+.module table td a.addlink,
+.module table td a.changelink,
+.module table td a.deletelink {
+
+    background: transparent !important;
+    color: #c2185b !important;
+
+    border: none !important;
+    padding: 2px 5px !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* Hover */
+
+.module table td a:hover {
+
+    background: transparent !important;
+    color: #8e1748 !important;
+}
+
+
+/* =====================================================
+   REMOVE DARK BACKGROUND FROM ADD/CHANGE AREAS
+   ===================================================== */
+
+.addlink,
+.changelink,
+.deletelink {
+
+    background: transparent !important;
+    color: #c2185b !important;
+}
+
+
+/* =====================================================
+   RECENT ACTIONS
+   ===================================================== */
+
+#content-related .module {
+
+    background: #ffffff !important;
+
+    border: 1px solid #f1b1cc !important;
+}
+
+
+/* Recent Actions title */
+
+#content-related .module h2 {
+
+    background: #c2185b !important;
+    color: #ffffff !important;
+
+    border-radius: 8px 8px 0 0 !important;
+}
+
+
+/* My actions */
+
+#content-related .module h3 {
+
+    background: #ffe4ef !important;
+    color: #c2185b !important;
+
+    border: none !important;
+}
+
+
+/* Recent action list */
+
+#content-related ul.actionlist,
+#content-related ul.actionlist li {
+
+    background: #ffffff !important;
+    color: #c2185b !important;
+
+    border: none !important;
+}
+
+
+/* None available */
+
+#content-related .quiet {
+
+    color: #c2185b !important;
+}
+
+
+/* =====================================================
+   LEFT SIDEBAR
+   ===================================================== */
+
+#nav-sidebar {
+
+    background: #fff7fb !important;
+
+    border-right: 1px solid #f3b4ce !important;
+}
+
+
+/* Sidebar app heading */
+
+#nav-sidebar .module caption {
+
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   SIDEBAR MODEL ITEMS
+   NO BACKGROUND
+   TEXT ONLY
+   ===================================================== */
+
+#nav-sidebar .module ul,
+#nav-sidebar .module li,
+#nav-sidebar .module li a {
+
+    background: transparent !important;
+}
+
+
+/* Model names */
+
+#nav-sidebar .module li a {
+
+    color: #c2185b !important;
+
+    font-weight: 600 !important;
+
+    border: none !important;
+}
+
+
+/* Hover */
+
+#nav-sidebar .module li a:hover {
+
+    background: transparent !important;
+    color: #8e1748 !important;
+}
+
+
+/* =====================================================
+   SELECTED SIDEBAR ITEM
+   ===================================================== */
+
+#nav-sidebar .module li.selected a,
+#nav-sidebar .module li.current-model a {
+
+    background: transparent !important;
+    color: #c2185b !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* =====================================================
+   FORM PAGE
+   Order / Product / Product Offer etc.
+   ===================================================== */
+
+
+/* Form background */
+
+.form-row,
+fieldset,
+.inline-group,
+.inline-related {
+
+    background: #ffffff !important;
+
+    border-color: #f2bfd3 !important;
+}
+
+
+/* Form labels */
+
+.form-row label {
+
+    color: #c2185b !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* =====================================================
+   REMOVE BLACK INPUT BOXES
+   ===================================================== */
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+textarea,
+select {
+
+    background: #ffffff !important;
+    color: #c2185b !important;
+
+    border: 1px solid #e7a8c2 !important;
+
+    border-radius: 6px !important;
+
+    box-shadow: none !important;
+}
+
+
+/* Dropdown */
+
+select option {
+
+    background: #ffffff !important;
+    color: #c2185b !important;
+}
+
+
+/* Focus */
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    background: #ffffff !important;
+    color: #c2185b !important;
+
+    border: 2px solid #c2185b !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* =====================================================
+   SAVE BUTTON AREA
+   ===================================================== */
+
+.submit-row {
+
+    background: #ffffff !important;
+
+    border-top: 1px solid #f2bfd3 !important;
+}
+
+
+/* Save buttons */
+
+.submit-row input,
+.submit-row button {
+
+    background: #c2185b !important;
+    color: #ffffff !important;
+
+    border: none !important;
+    border-radius: 7px !important;
+}
+
+
+/* =====================================================
+   BREADCRUMBS
+   ===================================================== */
+
+.breadcrumbs {
+
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+.breadcrumbs a {
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   REMOVE BLACK FROM ALL COMMON DJANGO ADMIN AREAS
+   ===================================================== */
+
+#content *,
+#content-related *,
+#nav-sidebar * {
+
+    --darkened-bg: #ffffff;
+}
+
+
+/* Tables */
+
+table,
+thead,
+tbody,
+tr,
+td,
+th {
+
+    background-color: #ffffff !important;
+}
+
+
+/* Keep section headings pink */
+
+.module caption,
+.module h2,
+#content-related h2 {
+
+    background-color: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+#footer {
+
+    background: #ffffff !important;
+    color: #c2185b !important;
+
+    border-top: 1px solid #f3b4ce !important;
+}/* =========================================
+   SMARTCHOICE - ADD / CHANGE
+   NO BACKGROUND, SYMBOL + PINK TEXT
+   ========================================= */
+
+/* Remove background from Add */
+a.addlink,
+a.addlink:link,
+a.addlink:visited,
+a.addlink:hover {
+    background: none !important;
+    background-image: none !important;
+
+    color: #c2185b !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    padding: 2px 5px !important;
+}
+
+
+/* Add + symbol */
+a.addlink::before {
+    content: "+";
+    color: #c2185b !important;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-right: 5px;
+}
+
+
+/* Remove background from Change */
+a.changelink,
+a.changelink:link,
+a.changelink:visited,
+a.changelink:hover {
+    background: none !important;
+    background-image: none !important;
+
+    color: #c2185b !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    padding: 2px 5px !important;
+}
+
+
+/* Change pencil symbol */
+a.changelink::before {
+    content: "✎";
+    color: #c2185b !important;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   DELETE - ALSO NO BACKGROUND
+   ========================================= */
+
+a.deletelink,
+a.deletelink:link,
+a.deletelink:visited,
+a.deletelink:hover {
+    background: none !important;
+    background-image: none !important;
+
+    color: #c2185b !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================
+   MODEL TEXT - NO BACKGROUND
+   ========================================= */
+
+.module td,
+.module td a {
+    background: transparent !important;
+    background-image: none !important;
+
+    color: #c2185b !important;
+}
+
+
+/* Keep Add/Change symbols visible */
+.module td a.addlink::before,
+.module td a.changelink::before {
+    background: transparent !important;
+}
+
+
+/* =========================================
+   HOVER - NO COLOURED BOX
+   ========================================= */
+
+.module td a.addlink:hover,
+.module td a.changelink:hover {
+    background: transparent !important;
+    background-image: none !important;
+
+    color: #8e1748 !important;
+}
+/* =========================================
+   SMART CHOICE ADMIN - ROW & LINK FIX
+   ========================================= */
+
+/* Groups / Users text - remove pink text */
+#content-main .module a {
+    color: #555 !important;
+    text-decoration: none !important;
+}
+
+/* Add / Change links */
+#content-main .module .addlink,
+#content-main .module .changelink {
+    color: #c2185b !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+/* Each row full width */
+#content-main .module table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+/* Full line between every row */
+#content-main .module table tr {
+    border-bottom: 1px solid #d8d8d8 !important;
+}
+
+/* Remove pink background from selected/current product item */
+#content-main .module table tr.selected,
+#content-main .module table tr:hover {
+    background: transparent !important;
+}
+
+/* Order items / Orders / Product offers / Products
+   Remove pink background */
+#content-main .module table td {
+    background: transparent !important;
+}
+
+/* Make the line extend across the complete row */
+#content-main .module table td {
+    border-bottom: 1px solid #d8d8d8 !important;
+    padding: 10px 12px !important;
+}
+
+/* Keep Add and Change on right side */
+#content-main .module table td:last-child {
+    text-align: right !important;
+    white-space: nowrap !important;
+}
+
+/* Section heading stays pink */
+#content-main .module h2 {
+    background: linear-gradient(
+        90deg,
+        #8e1748,
+        #c2185b,
+        #ff72a9
+    ) !important;
+    color: white !important;
+}
+/* =========================================
+   SMART CHOICE ADMIN - SIDEBAR FIX
+   ========================================= */
+
+/* -----------------------------------------
+   1. GROUPS / USERS
+   Pink text KEEP
+   ----------------------------------------- */
+
+#nav-sidebar .module a {
+    color: #c2185b !important;
+}
+
+
+/* -----------------------------------------
+   2. ADD / CHANGE ROW
+   Full width black line
+   ----------------------------------------- */
+
+#nav-sidebar .module table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+#nav-sidebar .module table tr {
+    border-bottom: 1px solid #555 !important;
+}
+
+#nav-sidebar .module table tr th,
+#nav-sidebar .module table tr td {
+    border-bottom: 1px solid #555 !important;
+}
+
+
+/* -----------------------------------------
+   3. ADD / CHANGE
+   Pink text + no separate background
+   ----------------------------------------- */
+
+#nav-sidebar .module .addlink,
+#nav-sidebar .module .changelink {
+    background: transparent !important;
+    color: #c2185b !important;
+}
+
+
+/* -----------------------------------------
+   4. PRODUCTS
+   ORDER ITEMS pink selected background REMOVE
+   ----------------------------------------- */
+
+#nav-sidebar .module tr.current-model {
+    background: transparent !important;
+}
+
+#nav-sidebar .module tr.current-model th,
+#nav-sidebar .module tr.current-model td {
+    background: transparent !important;
+}
+
+#nav-sidebar .module tr.current-model a {
+    background: transparent !important;
+}
+
+
+/* -----------------------------------------
+   5. PRODUCTS - EACH ITEM
+   Full width line between items
+   ----------------------------------------- */
+
+#nav-sidebar .module table tr th,
+#nav-sidebar .module table tr td {
+    border-bottom: 1px solid #555 !important;
+}
+
+
+/* -----------------------------------------
+   6. ADD / CHANGE area
+   Line should continue underneath them
+   ----------------------------------------- */
+
+#nav-sidebar .module table tr th:last-child,
+#nav-sidebar .module table tr td:last-child {
+    border-bottom: 1px solid #555 !important;
+}
+/* =========================================
+   DJANGO ADMIN - FINAL FIX
+   ========================================= */
+
+/* 1. ADD / CHANGE கீழேயும் FULL LINE வர வேண்டும் */
+#nav-sidebar .module table tr {
+    border-bottom: 1px solid #555 !important;
+}
+
+#nav-sidebar .module table tr th,
+#nav-sidebar .module table tr td {
+    border-bottom: 1px solid #555 !important;
+}
+
+
+/* 2. PRODUCTS section-ல்
+      Order items / Orders / Product offers / Products
+      பின்னால் இருக்கும் PINK BACKGROUND REMOVE */
+#nav-sidebar .module tr.current-model,
+#nav-sidebar .module tr.current-model th,
+#nav-sidebar .module tr.current-model td,
+#nav-sidebar .module tr.current-model a {
+    background: transparent !important;
+}
+
+
+/* Product links-க்கு இருக்கும் pink pill background remove */
+#nav-sidebar .module table th a {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* 3. Products area-வின் LEFT SIDE black border-ஐ PINK ஆக மாற்று */
+#nav-sidebar .module {
+    border-left: 3px solid #c2185b !important;
+}
+
+
+/* 4. Hover செய்தாலும் pink background வரக்கூடாது */
+#nav-sidebar .module tr:hover,
+#nav-sidebar .module tr:hover th,
+#nav-sidebar .module tr:hover td,
+#nav-sidebar .module tr:hover a {
+    background: transparent !important;
+}
+/* =========================================================
+   SMART CHOICE ADMIN - FINAL OVERRIDE
+   ========================================================= */
+
+/* =========================================================
+   SECTION HEADINGS
+   AUTHENTICATION AND AUTHORIZATION / PRODUCTS
+   WHITE TEXT
+   ========================================================= */
+
+#content-main .module h2,
+#nav-sidebar .module h2 {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ALL ITEM NAMES
+   Groups / Users / Order items / Orders /
+   Product offers / Products
+   PINK TEXT
+   ========================================================= */
+
+#content-main .module tbody th a,
+#content-main .module tbody td a,
+#nav-sidebar .module tbody th a,
+#nav-sidebar .module tbody td a {
+    color: #c2185b !important;
+}
+
+
+/* =========================================================
+   REMOVE PINK BACKGROUND FROM PRODUCT ITEMS
+   Order items / Orders / Product offers / Products
+   ========================================================= */
+
+#content-main .module tbody tr,
+#content-main .module tbody tr th,
+#content-main .module tbody tr td,
+#nav-sidebar .module tbody tr,
+#nav-sidebar .module tbody tr th,
+#nav-sidebar .module tbody tr td {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+
+/* REMOVE PINK PILL / BACKGROUND FROM THE LINK ITSELF */
+
+#content-main .module tbody th a,
+#nav-sidebar .module tbody th a {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+/* =========================================================
+   FULL WIDTH BLACK LINE
+   INCLUDING UNDER ADD / CHANGE
+   ========================================================= */
+
+#content-main .module table,
+#nav-sidebar .module table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+
+/* EVERY ROW */
+
+#content-main .module tbody tr,
+#nav-sidebar .module tbody tr {
+    border-bottom: 1px solid #555 !important;
+}
+
+
+/* EVERY CELL */
+
+#content-main .module tbody tr th,
+#content-main .module tbody tr td,
+#nav-sidebar .module tbody tr th,
+#nav-sidebar .module tbody tr td {
+    border-bottom: 1px solid #555 !important;
+}
+
+
+/* LAST CELL - ADD / CHANGE SIDE
+   ALSO KEEP LINE */
+
+#content-main .module tbody tr th:last-child,
+#content-main .module tbody tr td:last-child,
+#nav-sidebar .module tbody tr th:last-child,
+#nav-sidebar .module tbody tr td:last-child {
+    border-bottom: 1px solid #555 !important;
+}
+
+
+/* =========================================================
+   ADD / CHANGE
+   PINK TEXT
+   NO BACKGROUND
+   ========================================================= */
+
+#content-main .module .addlink,
+#content-main .module .changelink,
+#nav-sidebar .module .addlink,
+#nav-sidebar .module .changelink {
+    color: #c2185b !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   HOVER - NO PINK BACKGROUND
+   ========================================================= */
+
+#content-main .module tbody tr:hover,
+#content-main .module tbody tr:hover th,
+#content-main .module tbody tr:hover td,
+#content-main .module tbody tr:hover a,
+#nav-sidebar .module tbody tr:hover,
+#nav-sidebar .module tbody tr:hover th,
+#nav-sidebar .module tbody tr:hover td,
+#nav-sidebar .module tbody tr:hover a {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+
+/* =========================================================
+   REMOVE SELECTED / CURRENT PINK BACKGROUND
+   ========================================================= */
+
+#content-main .module .current-model,
+#content-main .module .current-model th,
+#content-main .module .current-model td,
+#content-main .module .current-model a,
+#nav-sidebar .module .current-model,
+#nav-sidebar .module .current-model th,
+#nav-sidebar .module .current-model td,
+#nav-sidebar .module .current-model a {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+
+/* =========================================================
+   LEFT BORDER - PINK
+   ========================================================= */
+
+#content-main .module,
+#nav-sidebar .module {
+    border-left-color: #c2185b !important;
+}
+/* =====================================================
+   SMART CHOICE ADMIN - FINAL COLOR FIX
+   ===================================================== */
+
+
+/* =====================================================
+   1. AUTHENTICATION AND AUTHORIZATION
+      PRODUCTS
+      HEADING TEXT = WHITE
+   ===================================================== */
+
+#nav-sidebar .module h2,
+#content-main .module h2,
+#content-main .module caption {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+
+/* =====================================================
+   2. AUTHENTICATION / PRODUCTS HEADING
+      PINK BACKGROUND
+   ===================================================== */
+
+#nav-sidebar .module h2,
+#content-main .module h2 {
+    background: linear-gradient(
+        90deg,
+        #8e1748,
+        #c2185b,
+        #ff72a9
+    ) !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   3. GROUPS / USERS / PRODUCTS ITEM TEXT
+      = PINK
+   ===================================================== */
+
+#nav-sidebar .module th a,
+#nav-sidebar .module td a,
+#content-main .module th a,
+#content-main .module td a {
+    color: #c2185b !important;
+}
+
+
+/* =====================================================
+   4. GROUP / USER CHANGE PAGE
+      DARK / BLACK HEADER AREA = PINK
+   ===================================================== */
+
+body.change-list #header,
+body.change-form #header,
+body.delete-confirmation #header {
+    background: linear-gradient(
+        90deg,
+        #8e1748,
+        #c2185b,
+        #ff72a9
+    ) !important;
+}
+
+
+/* =====================================================
+   5. ADMIN HEADER TEXT = WHITE
+   ===================================================== */
+
+#header,
+#header a,
+#header h1,
+#header h1 a {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   6. BREADCRUMBS DARK AREA = PINK
+   ===================================================== */
+
+div.breadcrumbs {
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+div.breadcrumbs a {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   7. CHANGE / GROUP / USER PAGE
+      DARK MODULE HEADER = PINK
+   ===================================================== */
+
+.change-form .module h2,
+.change-list .module h2 {
+    background: linear-gradient(
+        90deg,
+        #8e1748,
+        #c2185b,
+        #ff72a9
+    ) !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   8. ACTION BAR / DARK ADMIN AREAS = PINK
+   ===================================================== */
+
+.submit-row {
+    background: #ffe4ef !important;
+    border: 1px solid #c2185b !important;
+}
+
+
+/* =====================================================
+   9. SELECTED / CURRENT ADMIN ITEMS
+      DARK BACKGROUND REMOVE
+      PINK BACKGROUND
+   ===================================================== */
+
+#nav-sidebar .current-app,
+#nav-sidebar .current-model,
+#nav-sidebar .selected {
+    background: #ffe4ef !important;
+    color: #c2185b !important;
+}
+
+
+/* =====================================================
+   10. SELECTED LINKS
+   ===================================================== */
+
+#nav-sidebar .current-app a,
+#nav-sidebar .current-model a,
+#nav-sidebar .selected a {
+    color: #c2185b !important;
+    background: transparent !important;
+}
+
+
+/* =====================================================
+   11. DARK HOVER
+      PINK HOVER
+   ===================================================== */
+
+#nav-sidebar a:hover {
+    background: #ffe4ef !important;
+    color: #c2185b !important;
+}
+
+
+/* =====================================================
+   12. ADD / CHANGE
+   ===================================================== */
+
+.addlink,
+.changelink {
+    color: #c2185b !important;
+}
+
+
+/* =====================================================
+   13. BUTTONS
+   ===================================================== */
+
+input[type="submit"],
+.button,
+.submit-row input,
+a.button {
+    background: #c2185b !important;
+    color: #ffffff !important;
+    border-color: #c2185b !important;
+}
+
+input[type="submit"]:hover,
+.button:hover,
+a.button:hover {
+    background: #8e1748 !important;
+    color: #ffffff !important;
+}
+/* =========================================================
+   SMART CHOICE ADMIN - BLACK TO PINK FINAL FIX
+   ========================================================= */
+
+
+/* =========================================================
+   1. CHANGE-LIST PAGE
+   BLACK ACTION BOX → PINK
+   ========================================================= */
+
+#changelist .actions,
+.change-list .actions,
+#changelist-form .actions {
+    background: #c2185b !important;
+    background-color: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* Action text */
+#changelist .actions label,
+#changelist .actions span,
+#changelist .actions .action-counter {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   2. USERNAME TABLE CHECKBOXES
+   WHITE normally
+   PINK when CLICKED / CHECKED
+   ========================================================= */
+
+#changelist table input[type="checkbox"] {
+    accent-color: #c2185b !important;
+}
+
+
+/* Checkbox itself */
+#changelist table input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    background: #ffffff !important;
+}
+
+
+/* Checked = Pink */
+#changelist table input[type="checkbox"]:checked {
+    accent-color: #c2185b !important;
+}
+
+
+/* =========================================================
+   3. SELECTED USER ROW
+   LIGHT PINK
+   ========================================================= */
+
+#result_list tbody tr.selected {
+    background: #ffe4ef !important;
+}
+
+#result_list tbody tr.selected td,
+#result_list tbody tr.selected th {
+    background: #ffe4ef !important;
+}
+
+
+/* =========================================================
+   4. CHANGE-LIST TABLE HEADER
+   BLACK BACKGROUND REMOVE
+   PINK BACKGROUND
+   ========================================================= */
+
+#result_list thead th {
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+#result_list thead th a {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   5. TABLE CHECKBOX COLUMN
+   WHITE BACKGROUND
+   ========================================================= */
+
+#result_list tbody td:first-child,
+#result_list tbody th:first-child {
+    background: #ffffff !important;
+}
+
+
+/* Checked row */
+#result_list tbody tr:has(input[type="checkbox"]:checked) td,
+#result_list tbody tr:has(input[type="checkbox"]:checked) th {
+    background: #ffe4ef !important;
+}
+
+
+/* =========================================================
+   6. SECOND IMAGE
+   BLACK "0 groups" BOX → PINK
+   ========================================================= */
+
+#changelist .paginator,
+#changelist .paginator-container {
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* Empty result / group count dark box */
+#changelist .results + p,
+#changelist .paginator + p,
+#changelist .object-tools + * {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   7. DARK RESULT BAR / EMPTY GROUP BAR → PINK
+   ========================================================= */
+
+#changelist .results,
+#changelist .results table {
+    background: #ffffff !important;
+}
+
+
+/* Any dark action/result strip */
+#changelist .actions,
+#changelist .paginator {
+    background: #c2185b !important;
+}
+
+
+/* =========================================================
+   8. PRODUCTS - HEADING
+   PRODUCTS TEXT → WHITE
+   ========================================================= */
+
+#nav-sidebar .module h2,
+#content-main .module h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+
+/* PRODUCTS heading background */
+#nav-sidebar .module h2,
+#content-main .module h2 {
+    background: #c2185b !important;
+}
+
+
+/* =========================================================
+   9. PRODUCTS ITEMS
+   NO PINK PILL / NO BLACK
+   WHITE BACKGROUND
+   ========================================================= */
+
+#nav-sidebar .module tbody tr,
+#nav-sidebar .module tbody th,
+#nav-sidebar .module tbody td {
+    background: #ffffff !important;
+}
+
+
+/* Product names */
+#nav-sidebar .module tbody th a {
+    color: #c2185b !important;
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   10. PRODUCTS ROW HOVER
+   WHITE normally
+   LIGHT PINK when mouse over
+   ========================================================= */
+
+#nav-sidebar .module tbody tr:hover,
+#nav-sidebar .module tbody tr:hover th,
+#nav-sidebar .module tbody tr:hover td {
+    background: #ffe4ef !important;
+}
+
+
+/* =========================================================
+   11. GROUPS / USERS
+   WHITE normally
+   LIGHT PINK on hover
+   ========================================================= */
+
+#nav-sidebar .module tbody tr th a,
+#nav-sidebar .module tbody tr td a {
+    color: #c2185b !important;
+}
+
+#nav-sidebar .module tbody tr:hover {
+    background: #ffe4ef !important;
+}
+
+
+/* =========================================================
+   12. ALL ADMIN DARK BOXES
+   BLACK → PINK
+   ========================================================= */
+
+#changelist .actions,
+#changelist .paginator,
+#changelist .filtered,
+#changelist .results thead,
+#changelist-form .actions {
+    background-color: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   13. SEARCH BUTTON
+   ========================================================= */
+
+#changelist-search input[type="submit"],
+#changelist-search button {
+    background: #c2185b !important;
+    color: #ffffff !important;
+    border-color: #c2185b !important;
+}
+
+
+/* =========================================================
+   14. ADD BUTTON
+   ========================================================= */
+
+.object-tools a,
+.addlink {
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   15. GENERAL ADMIN DARK BACKGROUND
+   REMOVE BLACK
+   ========================================================= */
+
+#content .module,
+#content-main .module {
+    color: #351526;
+}
+
+
+/* =========================================================
+   16. TABLE ROW LINES
+   ========================================================= */
+
+#result_list tbody tr {
+    border-bottom: 1px solid #555 !important;
+}
+
+#result_list tbody td,
+#result_list tbody th {
+    border-bottom: 1px solid #555 !important;
+}
+/* =========================================================
+   1. FIRST BOX ONLY - PINK
+   2. SECOND BOX - WHITE BACKGROUND + PINK TEXT
+   3. PRODUCTS - WHITE TEXT
+   ========================================================= */
+
+
+/* ---------- FIRST BOX: PINK ---------- */
+/* Authentication and Authorization */
+
+#content-main > .module:first-child h2,
+#content-main > .module:first-child .module-header,
+#content-main > .module:first-child caption {
+    background: #c2185b !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------- SECOND BOX: WHITE + PINK TEXT ---------- */
+/* Products box */
+
+#content-main > .module:nth-child(2) {
+    background: #ffffff !important;
+}
+
+#content-main > .module:nth-child(2) h2 {
+    background: #ffffff !important;
+    color: #c2185b !important;
+    -webkit-text-fill-color: #c2185b !important;
+}
+
+
+/* Products box - all items pink text */
+#content-main > .module:nth-child(2) a,
+#content-main > .module:nth-child(2) th,
+#content-main > .module:nth-child(2) td {
+    color: #c2185b !important;
+    background: #ffffff !important;
+}
+
+
+/* ---------- PRODUCTS HEADING ONLY ---------- */
+/* Pink background → White "PRODUCTS" text */
+
+#content-main > .module:nth-child(2) h2 {
+    background: #c2185b !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+
+/* ---------- SECOND BOX ROWS ---------- */
+/* White background + Pink text */
+
+#content-main > .module:nth-child(2) tbody tr,
+#content-main > .module:nth-child(2) tbody th,
+#content-main > .module:nth-child(2) tbody td {
+    background: #ffffff !important;
+    color: #c2185b !important;
+}
+
+
+/* Hover */
+#content-main > .module:nth-child(2) tbody tr:hover,
+#content-main > .module:nth-child(2) tbody tr:hover th,
+#content-main > .module:nth-child(2) tbody tr:hover td {
+    background: #ffe4ef !important;
+    color: #c2185b !important;
+}
+
+
+/* Product links */
+#content-main > .module:nth-child(2) tbody a {
+    color: #c2185b !important;
+}
+
+
+/* =========================================================
+   PRODUCTS TITLE - FORCE WHITE
+   ========================================================= */
+
+#content-main .module h2 a,
+#content-main .module h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+/* =====================================================
+   PRODUCTS HEADING - FINAL FIX
+   ===================================================== */
+
+/* Pink heading bar */
+#nav-sidebar .module h2 {
+    background: #c2185b !important;
+    padding: 12px 15px !important;
+    margin: 0 !important;
+}
+
+/* PRODUCTS text */
+#nav-sidebar .module h2 a,
+#nav-sidebar .module h2 a:link,
+#nav-sidebar .module h2 a:visited,
+#nav-sidebar .module h2 a:hover,
+#nav-sidebar .module h2 a:active {
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+
+    text-decoration: none !important;
+    text-shadow: none !important;
+
+    display: block !important;
+    width: 100% !important;
+}
+
+/* If PRODUCTS is direct text inside h2 */
+#nav-sidebar .module h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Remove white box/pill */
+#nav-sidebar .module h2 *,
+#nav-sidebar .module h2 a * {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}/* HOME PAGE - PRODUCTS HEADING FIX */
+#content-main .app-products.module caption {
+    background: #c2185b !important;
+    background-color: #c2185b !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+}
+
+#content-main .app-products.module caption a {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: transparent !important;
+    text-decoration: none !important;
+}

@@ -35,6 +35,11 @@
         <div class="sc-header-actions">
             <a class="sc-header-action sc-account-action" href="{% url 'account' %}" aria-label="{% trans 'Account' %}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 21c.2-4 2.8-6 7-6s6.8 2 7 6"></path></svg><span>{% if user.is_authenticated %}{{ user.username }}{% else %}{% trans "Account" %}{% endif %}</span></a>
             <a class="sc-header-action sc-cart-action" href="{% url 'cart' %}" aria-label="{% trans 'Cart' %}: {{ cart_count }} {% trans 'items' %}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h2l2.3 10.2a2 2 0 0 0 2 1.6h9.9a2 2 0 0 0 2-1.6L22 7H5"></path><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle></svg><span>{% trans "Cart" %}</span><b class="sc-cart-count">{{ cart_count }}</b></a>
+            {% if user.is_authenticated and user.is_staff %}
+               <a class="sc-logout-button" href="{% url 'admin:index' %}">
+                   Admin
+                </a>
+            {% endif %}
             {% if user.is_authenticated %}
                 <a class="sc-logout-button" href="{% url 'logout' %}">{% trans "Logout" %}</a>
             {% else %}
