@@ -1164,26 +1164,75 @@ def checkout(request):
 def place_order(request):
 
     if request.method != "POST":
-        return redirect("/checkout/")
+        return redirect("checkout")
+
+    # Customer details
+    full_name = request.POST.get("full_name", "").strip()
+    phone = request.POST.get("phone", "").strip()
+    address = request.POST.get("address", "").strip()
+    city = request.POST.get("city", "").strip()
+    pincode = request.POST.get("pincode", "").strip()
+
+    payment_method = request.POST.get(
+        "payment_method",
+        "Cash on Delivery"
+    )
+
+    # =========================================
+    # BUY NOW ORDER
+    # =========================================
+
+    product_id = request.POST.get("product_id")
+    quantity = request.POST.get("quantity", "1")
+
+    if product_id:
+
+        product = get_object_or_404(
+            Product,
+            id=product_id,
+            is_active=True
+        )
+
+        try:
+            quantity = int(quantity)
+        except (ValueError, TypeError):
+            quantity = 1
+
+        if quantity < 1:
+            quantity = 1
+
+        total = product.price * quantity
+
+        order = Order.objects.create(
+            user=request.user,
+            total_amount=total,
+            full_name=full_name,
+            phone=phone,
+            address=address,
+            city=city,
+            pincode=pincode,
+            payment_method=payment_method
+        )
+
+        OrderItem.objects.create(
+            order=order,
+            product=product,
+            quantity=quantity,
+            price=product.price
+        )
+
+        return redirect("order_success")
+
+    # =========================================
+    # CART ORDER
+    # =========================================
 
     cart_items = CartItem.objects.filter(
         user=request.user
     ).select_related("product")
 
     if not cart_items.exists():
-        return redirect("/cart/")
-
-    # Customer details
-    full_name = request.POST.get("full_name")
-    phone = request.POST.get("phone")
-    address = request.POST.get("address")
-    city = request.POST.get("city")
-    pincode = request.POST.get("pincode")
-
-    payment_method = request.POST.get(
-        "payment_method",
-        "Cash on Delivery"
-    )
+        return redirect("cart")
 
     total = sum(
         item.product.price * item.quantity
@@ -1199,7 +1248,6 @@ def place_order(request):
         city=city,
         pincode=pincode,
         payment_method=payment_method
-
     )
 
     for item in cart_items:
@@ -1211,12 +1259,10 @@ def place_order(request):
             price=item.product.price
         )
 
+    # Clear cart after successful order
     cart_items.delete()
 
-    return redirect(
-        "order_success"
-    )
-    
+    return redirect("order_success")
 @login_required(login_url="/login/")
 def order_success(request):
 
